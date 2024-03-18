@@ -1,0 +1,1622 @@
+@charset "utf-8";
+
+/* @media screen and (min-width:768px) */
+/* @media screen and (min-width:960px) */
+/*指定フォントは下記対応のこと
+font-family: 'Zen Kaku Gothic New', sans-serif; */
+/* 共通基本ルール
+余白：4倍数
+PCコンテンツ幅：1200px
+font: Zen Kaku Gothic New
+font-size: ベースSP12px　PC20px
+                 4の倍数
+見出しfont-size: SP→24,12px,PC→48.24px
+ＳＰ幅:375px 
+PC幅:1366px */
+.nisemono {
+    /*カラーコードを表示するために使わないclassを指定してます。*/
+    color: #007AB7;
+    color: #6CBAD8;
+    color: #000000;
+    color: #FFFFFF;
+    color: rgb(0, 122, 183, 0.9);
+    /*007AB7の90％*/
+    color: rgb(237, 161, 132, 0.2);
+    /*EDA184の20％*/
+    color: rgb(100, 201, 155, 0.2);
+    /*64C99Bの20%*/
+    color: #F4F4F4;
+    color: rgb(0, 0, 0, 0.25);
+    /*000000の25%*/
+    color: #8F8F8F;
+}
+
+/* ボディー全体に有効 */
+main,
+header,
+footer {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    width: 375px;
+}
+
+@media screen and (min-width:768px) {
+
+    main,
+    header,
+    footer {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width:960px) {
+
+    main,
+    header,
+    footer {
+        width: 1366px;
+        margin: 0 auto;
+    }
+}
+
+/* ボディーここまで */
+/* アニメーション*/
+.hidden {
+    display: none;
+}
+
+#roading {
+    background-color: #007AB7;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+#roading img {
+    width: 287px;
+    height: 117px;
+    position: absolute;
+    top: 275px;
+    left: 44px;
+}
+
+@media screen and (min-width:768px) {
+    #roading img {
+        width: 318px;
+        height: 128px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%)
+    }
+}
+
+
+@keyframes opening {
+    0% {
+        opacity: 0.0
+    }
+
+    10% {
+        opacity: 0.1
+    }
+
+    20% {
+        opacity: 0.2
+    }
+
+    30% {
+        opacity: 0.3
+    }
+
+    40% {
+        opacity: 0.4
+    }
+
+    50% {
+        opacity: 0.5
+    }
+
+    60% {
+        opacity: 0.6
+    }
+
+    70% {
+        opacity: 0.7
+    }
+
+    80% {
+        opacity: 0.8
+    }
+
+    90% {
+        opacity: 0.9
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+body #main2 #roading img {
+    animation-name: opening;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+/* アニメーションここまで */
+
+
+/* ヘッダー */
+/*トップエリアの背景ありエリアまで*/
+.toparea {
+    width: 375px;
+    height: 677px;
+    background: url(../images/taiwan_hero.png);
+    background-repeat: no-repeat;
+    background-size: 375px auto;
+    text-align: center;
+    position: relative;
+}
+
+.TopLogo {
+    width: 335px;
+    height: 135px;
+    background: url(../images/taiwan_heroLogo.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 200px;
+    left: 20px;
+}
+
+.logoType {
+    position: absolute;
+    top: 8px;
+    left: 20px;
+    text-align: center;
+}
+
+.tainanLogo {
+    position: absolute;
+    top: 120px;
+    left: 88px;
+    text-align: center;
+    z-index: 10;
+}
+
+.tainanLogo img {
+    width: 199px;
+}
+
+.hiroText {
+    font-size: 12px;
+    color: #ffffff;
+    width: 248px;
+    height: 54.6px;
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+    text-align: left;
+}
+
+/* ハンバーガーメニュー */
+header nav {
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    display: none;
+    width: 225px;
+    height: 667px;
+    background: #000000;
+    opacity: 0.7;
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: bold;
+    z-index: 80;
+    /* スライドメニュー*/
+    display: block;
+    right: -100%;
+    transition: right .5s;
+    text-align: center;
+    /* ここまで */
+}
+
+header nav .liMenu {
+    font-size: 24px;
+}
+
+.liMenu {
+    margin: 0 0 60px 0;
+}
+
+.li40 {
+    margin: 0 0 40px 0;
+}
+
+.li20 {
+    margin: 0 0 20px 0;
+}
+
+/* スライドメニュー*/
+header nav.spOpen {
+    right: 0;
+}
+
+/* ここまで */
+.navLogo {
+    position: absolute;
+    top: 8px;
+    left: 12px;
+}
+
+.navLogo img {
+    width: 101px;
+    height: 40px;
+}
+
+header nav ul {
+    position: absolute;
+    top: 132px;
+    right: 23px;
+}
+
+header nav ul li a {
+    display: block;
+    border-radius: 5px;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+}
+
+#drawerToggle {
+    z-index: 200;
+    box-sizing: border-box;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+}
+
+#drawerToggle span {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    display: inline-block;
+    width: 25px;
+    height: 1.2px;
+    border-radius: 1.5px;
+    background-color: #ffffff;
+    transition: all .2s;
+}
+
+#drawerToggle.open span:nth-child(2) {
+    margin-top: 12px;
+    width: 80%;
+    transform: translate(-15%);
+}
+
+#drawerToggle.open span:last-child {
+    margin-top: 24px;
+}
+
+#drawerToggle.spOpen span:first-child {
+    transform: translateY(12px) rotate(45deg);
+}
+
+#drawerToggle.spOpen span:nth-child(2) {
+    display: none;
+}
+
+#drawerToggle.spOpen span:last-child {
+    transform: translateY(12px) rotate(-45deg);
+}
+
+/* ここまで */
+
+/* SNSlogo配置 */
+header .snsLogo {
+    position: absolute;
+    top: 460px;
+    left: 20px;
+}
+
+header .snsLogo img {
+    display: block;
+    margin-bottom: 20px;
+}
+
+@media screen and (min-width:768px) {
+    .toparea {
+        width: 100%;
+        background: url(../images/taiwan_heroPc.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        text-align: center;
+        position: relative;
+    }
+
+    .TopLogo {
+        width: 55%;
+        height: 55%;
+        background: url(../images/taiwan_heroLogoPc.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        top: 20%;
+        left: 33%;
+    }
+
+    .logoType {
+        display: none;
+    }
+
+    .tainanLogo {
+        position: absolute;
+        top: 20%;
+        left: 18%;
+        text-align: center;
+    }
+
+    .tainanLogo img {
+        width: 80%;
+    }
+
+    .hiroText {
+        font-size: 20px;
+        line-height: 1.3;
+        color: #ffffff;
+        width: 367px;
+        height: 186px;
+        position: absolute;
+        right: 50px;
+        bottom: 180px;
+        text-align: left;
+    }
+
+    /* ハンバーガーメニュー PC */
+    .navLogo {
+        position: absolute;
+        top: 14px;
+        left: 20px;
+    }
+
+    #drawerToggle {
+        display: none;
+    }
+
+    header nav {
+        width: 100%;
+        height: 54px;
+        padding: 0 0 0 0;
+        display: inline-block;
+        position: absolute;
+        opacity: 1;
+        top: 20px;
+        left: 102px;
+        margin-right: 15px;
+        font-size: 24px;
+        font-weight: bold;
+        color: #ffffff;
+        background: none;
+    }
+
+    .liMenu {
+        display: none;
+    }
+
+    .liTop {
+        margin: 0 0 0 0;
+    }
+
+    header nav ul {
+        position: relative;
+        top: 0px;
+        right: 20px;
+        transform: unset;
+    }
+
+    header nav ul li {
+        display: inline-block;
+        border-radius: 2px;
+        padding: 30px 15px 0 0;
+    }
+
+    header nav ul li a {
+        display: block;
+        color: #ffffff;
+        text-decoration: none;
+        padding: 0 0 0 0;
+    }
+
+    header nav ul li:hover {
+        color: pink;
+    }
+
+    header nav .navLogo {
+        width: 516px;
+        height: 54px;
+        text-align: left;
+    }
+
+    /* ハンバーガーメニュー PCここまで */
+
+    /* PCSNSlogo配置 */
+    header .snsLogo {
+        position: absolute;
+        top: 40%;
+        left: 30px;
+    }
+
+    header .snsLogo img {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    /* PCSNSlogo配置 ここまで*/
+}
+
+@media screen and (min-width:960px) {
+    .toparea {
+        width: 1366px;
+        height: 768px;
+        background: url(../images/taiwan_heroPc.png);
+        background-repeat: no-repeat;
+        text-align: center;
+        position: relative;
+    }
+
+    .TopLogo {
+        width: 780px;
+        height: 314px;
+        background: url(../images/taiwan_heroLogoPc.png);
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 174px;
+        left: 223px;
+    }
+
+    .logoType {
+        display: none;
+    }
+
+    .tainanLogo {
+        position: absolute;
+        top: 94px;
+        left: 363px;
+        text-align: center;
+    }
+
+    .tainanLogo img {
+        width: 300px;
+    }
+
+    .hiroText {
+        font-size: 20px;
+        line-height: 1.3;
+        color: #ffffff;
+        width: 467px;
+        height: 86px;
+        position: absolute;
+        right: 100px;
+        bottom: 40px;
+        text-align: left;
+    }
+
+    /* ハンバーガーメニュー PC */
+    .navLogo {
+        position: absolute;
+        top: 14px;
+        left: 20px;
+    }
+
+    #drawerToggle {
+        display: none;
+    }
+
+    #globalNav {
+        width: 1160px;
+        height: 54px;
+        padding: 0 0 0 0;
+        display: inline-block;
+        position: absolute;
+        opacity: 1;
+        top: 20px;
+        left: 102px;
+        margin-right: 15px;
+        font-size: 24px;
+        font-weight: bold;
+        color: #ffffff;
+        background: none;
+    }
+
+    .liMenu {
+        display: none;
+    }
+
+    header nav ul {
+        position: relative;
+        top: 0px;
+        left: 269px;
+        transform: unset;
+    }
+
+    header nav ul li {
+        display: inline-block;
+        border-radius: 2px;
+        padding: 30px 15px 0 0;
+    }
+
+    header nav ul li a {
+        display: block;
+        color: #ffffff;
+        text-decoration: none;
+        padding: 0 0 0 0;
+    }
+
+    header nav ul li:hover {
+        color: pink;
+    }
+
+    header nav .navLogo {
+        width: 516px;
+        height: 54px;
+        text-align: left;
+    }
+
+    /* ハンバーガーメニュー PCここまで */
+
+    /* PCSNSlogo配置 */
+    header .snsLogo {
+        position: absolute;
+        top: 510px;
+        left: 110px;
+    }
+
+    header .snsLogo img {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    /* PCSNSlogo配置 ここまで*/
+}
+
+p,
+h1 {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-family: 'Playfair Display', serif;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+}
+
+.topPC {
+    @media screen and (min-width:768px) {
+        display: flex;
+    }
+}
+
+/* 見出しタイトル共通 */
+.midashi {
+    @media screen and (max-width:768px) {
+        position: relative;
+        margin: 20px 0 30px;
+        height: 50px;
+    }
+
+    @media screen and (min-width:768px) {
+        margin: 20px 0 0;
+        height: 96px;
+    }
+}
+
+.midashi img {
+    width: 220px;
+    height: auto;
+    position: absolute;
+
+    @media screen and (max-width:768px) {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    @media screen and (min-width:768px) {
+        width: 530px;
+        height: 96px;
+    }
+}
+
+.midashi h1 {
+    font-size: 24px;
+    position: absolute;
+
+    @media screen and (max-width:768px) {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    @media screen and (min-width:768px) {
+        font-size: 48px;
+        margin: 24px 103px;
+    }
+}
+
+.midashi h1 span {
+    font-size: 50%;
+}
+
+/* ここまで */
+
+.textFormosaTravel {
+    @media screen and (min-width:768px) {
+        width: 420px;
+        margin: 60px 0;
+    }
+}
+
+/* Formosa */
+.taiwanFlag {
+    width: 32px;
+    height: 24px;
+
+    @media screen and (max-width:768px) {
+        margin: 0px auto;
+        padding: 20px 0;
+    }
+
+    @media screen and (min-width:768px) {
+        width: 104px;
+        height: 78px;
+        margin: 80px 0 100px 283px;
+    }
+}
+
+.taiwanFlagImg {
+    @media screen and (min-width:768px) {
+        width: 104px;
+        height: 78px;
+    }
+}
+
+
+.formosa {
+    font-size: 20px;
+    line-height: 20px;
+
+    @media screen and (max-width:768px) {
+        margin: 20px 0 0 0;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    @media screen and (min-width:768px) {
+        width: 183px;
+        font-size: 48px;
+        line-height: 48px;
+        margin: 0 0 0 103px;
+    }
+}
+
+
+.formosa2 {
+    width: 132px;
+    font-size: 12px;
+    line-height: 12px;
+    border-bottom: 1px solid #000000;
+    padding: 12px 0;
+    margin: 0 auto;
+
+    @media screen and (min-width:768px) {
+        width: 361px;
+        font-size: 32px;
+        line-height: 32px;
+        padding: 20px 0;
+        margin: 0 0 0 103px;
+    }
+}
+
+
+img.top1A {
+    width: 335px;
+    height: 139px;
+    display: block;
+
+    @media screen and (max-width:768px) {
+        margin: 60px auto;
+    }
+
+    @media screen and (min-width:768px) {
+        width: 636px;
+        height: 298px;
+        margin: 80px 0 80px 163px;
+    }
+}
+
+img.top1B {
+    width: 335px;
+    height: 139px;
+    display: block;
+
+    @media screen and (max-width:768px) {
+        margin: 60px auto;
+    }
+
+    @media screen and (min-width:768px) {
+        width: 636px;
+        height: 298px;
+        margin: 80px 0 80px 104px;
+    }
+}
+
+.formosaTop {
+    background-image: url(../images/TOP_1A_back.jpg);
+    width: 375px;
+    height: 407px;
+
+    @media screen and (min-width:768px) {
+        width: 1366px;
+        height: 458px;
+    }
+}
+
+
+/* .formosaText {
+    width: 223px;
+    font-size: 12px;
+    line-height: 1.6;
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+
+    @media screen and (max-width:768px) {
+        margin: 0 auto;
+        padding: 12px 0;
+    }
+
+    @media screen and (min-width:768px) {
+        width: 420px;
+        font-size: 20px;
+        line-height: 32px;
+        margin: 80px 0 98px 0;
+    }
+} */
+
+.formosaTextBorder {
+    padding: 20px 0 0 0;
+
+    /* formosaTextのmargin-topをいじると背景画像もついてきてしまうため作成 */
+    @media screen and (min-width:768px) {
+        padding: 60px 0 60px 103px;
+    }
+}
+
+.formosaBottom {
+    background-image: url(../images/TOP_1B_back.jpg);
+    width: 375px;
+    height: 399px;
+
+    @media screen and (min-width:768px) {
+        width: 1366px;
+        height: 458px;
+    }
+}
+
+/* Gallery */
+.midashiGallery {
+    @media screen and (min-width:768px) {
+        margin: 0 0 160px 103px;
+    }
+}
+
+/* .slide {
+    margin: 0 auto;
+} */
+
+.imageBox {
+    display: flex;
+}
+
+#main_image0,
+#main_image6 {
+    @media screen and (max-width:768px) {
+        display: none;
+    }
+}
+
+.galleryImg {
+    width: 295px;
+    height: 467px;
+
+    @media screen and (max-width:768px) {
+        padding: 0 10px;
+    }
+
+    @media screen and (min-width:768px) {
+        margin: 0 40.5px;
+    }
+}
+
+.toolBar {
+    overflow: hidden;
+    text-align: center;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* #prev {
+    right: 10px;
+    margin-right: 0.5rem;
+    width: 18px;
+    height: 18px;
+    background-color: #000000;
+}
+
+#next {
+    left: 10px;
+    margin-left: 0.5rem;
+    width: 18px;
+    height: 18px;
+    background-color: #8F8F8F;
+} */
+
+/* Gallery(仮)↓ */
+*,
+body,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+/* ↓ スライドの外枠 */
+.slide-wrapper {
+    /* width: 100%; */
+    /* height: 300px; */
+    position: relative;
+    overflow: hidden;
+    /* はみ出したスライドを隠す */
+    padding: 0 0 40px 0;
+
+    @media screen and (min-width:768px) {
+        padding: 0 0 204px 0;
+    }
+}
+
+/*  ↓ スライド（コンテンツ） */
+.slide {
+    /*スライド全体 */
+    /* width: 300%; */
+    /* height: 100%; */
+    display: flex;
+    transition: all 0.3s;
+}
+
+.slide div {
+    /* スライド */
+    /* width: 33.33%; */
+    /* height: 100%; */
+    font-size: 16px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide1 {
+
+    /* スライドさせるために必要なクラス */
+    @media screen and (min-width:768px) {
+        transform: translateX(-3%);
+    }
+}
+
+.slide2 {
+
+    /* スライドさせるために必要なクラス */
+    @media screen and (min-width:768px) {
+        transform: translateX(-18%);
+    }
+}
+
+.slide3 {
+
+    /* スライドさせるために必要なクラス */
+    @media screen and (min-width:768px) {
+        transform: translateX(-50%);
+    }
+}
+
+.slide4 {
+
+    /* スライドさせるために必要なクラス */
+    @media screen and (min-width:768px) {
+        transform: translateX(-78%);
+    }
+}
+
+.slide5 {
+
+    /* スライドさせるために必要なクラス */
+    @media screen and (min-width:768px) {
+        transform: translateX(-90%);
+    }
+}
+
+
+
+/* ↓ 左右のボタン */
+.next {
+    @media screen and (min-width:768px) {
+        position: absolute;
+        width: 64px;
+        height: 64px;
+        background-image: url(../images/sliderNextIcon.svg);
+        margin: 60px 0 0 933px;
+    }
+}
+
+.prev {
+    @media screen and (min-width:768px) {
+        position: absolute;
+        width: 64px;
+        height: 64px;
+        background-image: url(../images/sliderPrevIcon.svg);
+        margin: 60px 0 0 389px;
+    }
+}
+
+/* ↓ インジケーター */
+.indicator {
+    /* width: 100%; */
+    position: absolute;
+    left: 0px;
+    display: flex;
+    column-gap: 40px;
+    z-index: 10;
+    margin: 20px 0 40px 63px;
+
+    /* justify-content: center; */
+    /* align-items: center; */
+    @media screen and (min-width:768px) {
+        margin: 0 0 0 493px;
+        top: 545px;
+        column-gap: 60px;
+    }
+}
+
+.indicator li {
+    width: 18px;
+    height: 18px;
+
+    @media screen and (min-width:768px) {
+        width: 28px;
+        height: 28px;
+        margin: 0 0px;
+    }
+
+    border-radius: 50%;
+    list-style: none;
+    background-color: #777575;
+    cursor: pointer;
+}
+
+.indicator li:first-of-type {
+    background-color: #000;
+}
+
+
+.ulDummy {
+    @media screen and (max-width:768px) {
+        /*IE(Internet Explorer)・Microsoft Edgeへの対応*/
+        -ms-overflow-style: none;
+        /*Firefoxへの対応*/
+        scrollbar-width: none;
+
+
+        /*Google Chrome、Safariへの対応*/
+        .contents_box::-webkit-scrollbar {
+            display: none;
+        }
+    }
+}
+
+
+.hscroll {
+    display: flex;
+    /* width: 200px; */
+    /* height: 200px; */
+    position: relative;
+}
+
+.hscroll span {
+    /* padding: 0; */
+    /* margin: 0; */
+    /* width: 100%; */
+    /* height: 100%; */
+    /* overflow: hidden; */
+    white-space: nowrap;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.hscroll img {
+    @media screen and (max-width:768px) {
+        width: 100%;
+    }
+
+    /* height: 100%; */
+    /* object-fit: contain; */
+}
+
+.hscroll div {
+    list-style: none;
+    display: inline-block;
+    scroll-snap-align: center;
+    /* width: 100%; */
+    /* height: 100%; */
+}
+
+.arrow {
+    top: 0;
+    position: absolute;
+    width: 8%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+}
+
+.arrow:before {
+    content: '';
+    position: absolute;
+    /* width: 10px; */
+    /* height: 10px; */
+    border-left: 4px solid gray;
+    border-bottom: 4px solid gray;
+}
+
+.hscroll span {
+    overflow-x: auto;
+}
+
+/* Gallery(仮)↑ */
+
+/* Travel&Event */
+section .nightKiji {
+    @media screen and (max-width:768px) {
+        width: 60%;
+        margin: 0 auto 40px;
+    }
+
+    @media screen and (min-width:768px) {
+        margin: auto 0;
+        position: relative;
+    }
+
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+}
+
+section .nightKiji p {
+    font-size: 12px;
+    line-height: 1.6;
+    letter-spacing: .03em;
+    text-align: justify;
+
+    @media screen and (max-width:768px) {
+        margin: 0 auto;
+        padding: 12px 0;
+    }
+
+    @media screen and (min-width:768px) {
+        font-size: 20px;
+        line-height: 1.6;
+    }
+}
+
+section .yataiA {
+    text-align: center;
+}
+
+/*Travel*/
+.midashiTravelPC {
+    @media screen and (min-width:768px) {
+        margin: 0 0 0 733px;
+    }
+}
+
+.textTravel {
+    @media screen and (min-width:768px) {
+        margin: 302px 299px 341px 163px;
+    }
+}
+
+.map {
+    @media screen and (max-width:768px) {
+        margin: 0 auto 60px auto;
+        padding: 60.2px 22px 111.8px 21px;
+        width: 223px;
+        border-bottom: solid 1px #000000;
+    }
+}
+
+.chizu {
+    background-image: url(../images/TOP_3.png);
+    margin: 0 auto;
+    width: 180px;
+    height: 355px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: block;
+    position: relative;
+
+    @media screen and (min-width:768px) {
+        background-image: url(../images/TOP_3_PC.png);
+        margin: 120px 0 0 0;
+        width: 225px;
+        height: 508px;
+    }
+}
+
+.chizu img {
+    @media screen and (max-width:768px) {
+        width: 59px;
+        height: 126px;
+    }
+
+    @media screen and (min-width:768px) {
+        width: 99px;
+        height: 209px;
+    }
+}
+
+.taipei {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    top: 54.8px;
+    left: 159px;
+
+    @media screen and (min-width:768px) {
+        top: 61px;
+        left: 222px;
+    }
+}
+
+.taichu {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    top: 82.42px;
+    left: -37px;
+
+    @media screen and (min-width:768px) {
+        top: 90px;
+        left: -79px;
+    }
+}
+
+.tainan {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    top: 280.8px;
+    left: 15px;
+
+    @media screen and (min-width:768px) {
+        top: 402px;
+        left: -16px;
+    }
+}
+
+.travelBottom {
+    @media screen and (max-width:768px) {
+        font-size: 0;
+        position: fixed;
+    }
+
+    @media screen and (min-width:768px) {
+        width: 480px;
+        height: 0;
+        color: white;
+        border-bottom: solid 1px #000000;
+        position: absolute;
+        top: 509px;
+        left: 280px;
+    }
+}
+
+/*Event*/
+.event {
+    @media screen and (min-width:768px) {
+        position: relative;
+        margin: 0 0 0 103px;
+    }
+}
+
+.textEvent {
+    @media screen and (min-width:768px) {
+        width: 314px;
+        margin: 32px 0;
+    }
+}
+
+.ranfesText {
+    @media screen and (min-width:768px) {
+        margin: 227px 0 0 78px;
+    }
+}
+
+.ranfesBorderBox {
+    @media screen and (min-width:768px) {
+        width: 314px;
+        margin: 0 auto;
+    }
+}
+
+.ranFes {
+    font-size: 20px;
+    line-height: 1;
+    margin: 60px auto 20px auto;
+
+    @media screen and (max-width:768px) {
+        text-align: center;
+    }
+
+    @media screen and (min-width:768px) {
+        font-size: 36px;
+        margin: 120px 0 40px 0;
+    }
+}
+
+.ranfesKijiBottom {
+    @media screen and (max-width:768px) {
+        padding: 0 0 60px 0;
+    }
+}
+
+img.TOP {
+    width: 335px;
+    height: 194px;
+    margin: 0 auto;
+    display: block;
+
+    @media screen and (min-width:768px) {
+        width: 580px;
+        height: 396px;
+    }
+}
+
+.shinnenText {
+    @media screen and (min-width:768px) {
+        margin: 267.2px 0 0 133px;
+    }
+}
+
+.kaisai {
+    font-size: 12px;
+    line-height: 1;
+    margin: 20px 0 8px 0;
+    text-align: center;
+    font-weight: bold;
+
+    @media screen and (min-width:768px) {
+        font-size: 20px;
+        margin: 0 0 32px 0;
+    }
+}
+
+.kikan {
+    font-size: 12px;
+    line-height: 1;
+    margin: 0 0 20px 0;
+    text-align: center;
+
+    @media screen and (min-width:768px) {
+        font-size: 20px;
+        margin: 32px 0;
+    }
+}
+
+.shinnen {
+    font-size: 20px;
+    line-height: 1.6;
+    margin: 40px 0 20px 0;
+
+    @media screen and (max-width:768px) {
+        text-align: center;
+    }
+
+    @media screen and (min-width:768px) {
+        font-size: 36px;
+        margin: 80px 0 40px 0;
+    }
+}
+
+/*基本情報*/
+.taiwanKihonTextDiv {
+    @media screen and (min-width:768px) {
+        margin: 80px 0;
+    }
+}
+
+.kihon {
+    border: #8F8F8F 1px solid;
+    width: 335px;
+    height: 544px;
+    margin: 20px;
+    padding: 20px;
+
+
+    @media screen and (min-width:768px) {
+        border: #8F8F8F 1px solid;
+        width: 1040px;
+        height: 560px;
+        margin: 80px 163px;
+        padding: 0px 10px;
+    }
+}
+
+.taiwanKihon {
+    font-size: 20px;
+    line-height: 20px;
+    vertical-align: top;
+    width: 123px;
+    height: 20px;
+    margin: 0 auto;
+
+
+    @media screen and (min-width:768px) {
+        font-size: 40px;
+        line-height: 40px;
+        vertical-align: top;
+        width: 242px;
+        height: 40px;
+        margin: 40px auto;
+    }
+}
+
+.taiwanKihonText {
+    font-size: 12px;
+    line-height: 1.6;
+    vertical-align: top;
+    margin: 40px 0;
+
+
+
+    @media screen and (min-width:768px) {
+        width: 450px;
+        height: 320px;
+        font-size: 20px;
+        line-height: 32px;
+        vertical-align: top;
+        margin: 0px 30px;
+    }
+}
+
+/* フッター */
+footer {
+    background-color: #007AB7;
+    color: #ffffff;
+    text-align: center;
+    font-size: 12px;
+}
+
+footer .flag {
+    margin: 0 auto;
+    padding: 20px 0 10px;
+}
+
+footer .flag img {
+    width: 32px;
+    height: auto;
+}
+
+footer nav {
+    width: 60%;
+    margin: 0 auto 35px;
+    text-align: left;
+}
+
+footer nav ul li {
+    border-bottom: 1px solid #ffffff;
+    padding: 12px 0 4px;
+}
+
+footer .icons {
+    display: flex;
+    width: 90%;
+    margin: 0 auto 12px;
+    align-items: center;
+}
+
+footer .icons .logo img {
+    width: 71px;
+    height: auto;
+    margin-right: 16px;
+}
+
+footer .icons .sns img {
+    padding-right: 16px;
+}
+
+footer p {
+    border-top: 1px #03A9F4 solid;
+    font-size: 10px;
+    padding: 20px 0 20px;
+}
+
+@media screen and (min-width:768px) {
+    .footerBase {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    footer .flag {
+        height: 116px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 40px 0 0 0;
+    }
+
+    footer .flag img {
+        width: 64px;
+        height: 48px;
+        padding: 0 0 0 0;
+    }
+
+    .footerBase nav {
+        font-size: 20px;
+        margin-right: 10%;
+    }
+
+    footer .icons .logo {
+        width: 256px;
+        margin-right: 10%;
+        align-self: flex-end;
+    }
+
+    footer .icons .logo img {
+        width: 256px;
+    }
+
+    footer .icons .sns {
+        display: flex;
+        justify-content: space-between;
+        width: 182.9px;
+        margin: 0 auto;
+        align-self: flex-end;
+    }
+
+    footer .icons .sns img {
+        width: 32px;
+        height: 32px;
+        padding: 0 0;
+    }
+
+    footer p {
+        font-size: 12px;
+        padding: 21px 0 21px 0;
+    }
+}
+
+@media screen and (min-width:960px) {
+    .footerBase {
+        width: 1160px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    footer .flag {
+        height: 116px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 40px 0 0 0;
+    }
+
+    footer .flag img {
+        width: 64px;
+        height: 48px;
+        padding: 0 0 0 0;
+    }
+
+    .footerBase nav {
+        font-size: 20px;
+        width: 452px;
+        margin-right: 120px;
+    }
+
+    footer .icons .logo {
+        width: 256px;
+        margin-right: 269.1px;
+        align-self: flex-end;
+    }
+
+    footer .icons .logo img {
+        width: 256px;
+    }
+
+    footer .icons .sns {
+        display: flex;
+        justify-content: space-between;
+        width: 182.9px;
+        margin: 0 auto;
+        align-self: flex-end;
+    }
+
+    footer .icons .sns img {
+        width: 32px;
+        height: 32px;
+        padding: 0 0;
+    }
+
+    footer p {
+        font-size: 12px;
+        padding: 21px 0 21px 0;
+    }
+}
+
+/* ここまで */
+
+/* スクロール */
+html {
+    scroll-behavior: smooth;
+}
+
+.scl a {
+    position: fixed;
+    bottom: 60px;
+    right: 10px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    text-decoration: none;
+    background-color: #333333;
+    opacity: 0.7;
+    display: block;
+    text-align: center;
+}
+
+.scl a::before {
+    position: absolute;
+    top: 7px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 16px;
+    height: 16px;
+    margin: auto;
+    content: '';
+    transform: rotate(-45deg);
+    border-top: 4px solid #ffffff;
+    border-right: 4px solid #ffffff;
+}
+
+@media screen and (min-width:768px) {
+    .scl a {
+        bottom: 40px;
+        right: 14px;
+        width: 100px;
+        height: 100px;
+    }
+
+    .scl a::before {
+        width: 40px;
+        height: 40px;
+        border-top: 8px solid #ffffff;
+        border-right: 8px solid #ffffff;
+    }
+}
