@@ -1,0 +1,249 @@
+@charset "UTF-8";
+
+/* スマートフォン用の設定 */
+body {
+    width: 375px;
+    /* スマートフォン用の全体幅 */
+}
+
+/* PC用の設定 */
+@media screen and (min-width: 768px) {
+
+    body {
+        width: 1366px;
+        /* PC用の全体幅 */
+    }
+}
+
+
+
+
+.hfback {
+    background-color: #D1B3C4;
+    width: 375px;
+    height: 130px;
+
+    @media screen and (min-width: 768px) {
+        width: 1366px;
+        height: 182px;
+    }
+}
+
+/* メニューアイコンを画面右上に固定しています */
+.gMenu {
+    cursor: pointer;
+    position: absolute;
+    /* right: 10px; */
+    top: 12px;
+    padding-top: 35.93px;
+    padding-left: 12px;
+    height: 12px;
+}
+
+li:hover {
+    mix-blend-mode: difference;
+    filter: invert();
+}
+
+.gMenu {
+    position: fixed;
+    /* right: 0; */
+    top: 0;
+    width: 100%;
+    z-index: 99;
+}
+
+/* メニューアイコンを画面右上に固定しています */
+.gMenu .menu-icon {
+    cursor: pointer;
+    /* position: absolute; */
+    /* right: 10px; */
+    top: 12px;
+    padding-top: 5px;
+    height: 12px;
+}
+
+/* メニューアイコン（三本線）の真ん中の線です */
+.gMenu .menu-icon .navicon {
+    background: #7F5539;
+    /* 色は自由に変更可能です */
+    display: block;
+    height: 2px;
+    /* 太さ */
+    width: 25px;
+    /* 長さ */
+    position: relative;
+    transition: background .4s ease-out;
+    /* 形が変わる時のアニメーション */
+}
+
+/* メニューアイコン（三本線）の上と下の線を疑似要素で追加 */
+.gMenu .menu-icon .navicon::before,
+.gMenu .menu-icon .navicon::after {
+    background: #7F5539;
+    /* 色は自由に変更可能です */
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .4s ease-out;
+    /* 形が変わる時のアニメーション */
+    width: 100%;
+}
+
+.gMenu .menu-icon .navicon::before {
+    top: 10px;
+}
+
+/* 位置を上にずらしています */
+.gMenu .menu-icon .navicon::after {
+    top: -10px;
+}
+
+/* 位置を下にずらしています */
+/* 表示されるメニューです */
+.gMenu .menu {
+    background-color: rgba(255, 255, 255, 0.9);
+    overflow: hidden;
+    max-height: 0;
+    /* ★最初は高さを0にして非表示状態に */
+    transition: max-height .6s;
+    /* 表示されるときのアニメーション */
+    text-align: center;
+}
+
+/* メニュー部分のデザインです */
+.gMenu .menu li:first-of-type {
+    padding-top: 50px;
+}
+
+.gMenu .menu li a {
+    display: block;
+    padding: 24px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.gMenu .menu li a:hover {
+    background-color: #f4f4f4;
+}
+
+/* チェックボックスは常に非表示です */
+.gMenu .menu-btn {
+    display: none;
+}
+
+/* ▼▼▼以下はチェックボックスがONの時の状態です▼▼▼ */
+.gMenu .menu-btn:checked~.menu {
+    max-height: 600px;
+    /* ★チェックボックスがオンの時高さを338pxにして表示させます */
+    transition: max-height .6s;
+}
+
+/* メニューボタンの中央の線を非表示に */
+.gMenu .menu-btn:checked~.menu-icon .navicon {
+    background: transparent;
+}
+
+/* メニューボタンの上下の線を45度傾けて✕印を作ります */
+.gMenu .menu-btn:checked~.menu-icon .navicon::before {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+.gMenu .menu-btn:checked~.menu-icon .navicon::after {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+
+/* 640px以上の画面幅 */
+@media screen and (min-width: 640px) {
+    .hero3 {
+        display: none;
+    }
+
+    ul {
+        display: flex;
+    }
+
+    li {
+        width: 125px;
+        background-color: #FFFFFF;
+        padding: 15px 0;
+        text-align: center;
+    }
+
+    .menu-btn {
+        display: none;
+    }
+}
+
+.logoHeader {
+    position: absolute;
+    top: 16px;
+    left: 157px;
+    width: 62px;
+    height: 53px;
+    background-image: url('../images/logoHeader.png');
+    background-size: cover;
+    /* 画像を領域に合わせて拡大縮小 */
+}
+
+
+.loginHeader {
+    padding-top: 24px;
+    padding-left: 62px;
+    text-align: center;
+}
+
+.logoLoginCart {
+    display: flex;
+}
+
+.textLoginCart {
+    font-size: 10px;
+    line-height: 1;
+    color: #7F5539;
+}
+
+.loginCart {
+    padding-top: 24px;
+    padding-left: 12px;
+    text-align: center;
+}
+
+.searchIconFrame {
+    border: solid 1px #7F5539;
+    background-color: #D9D9D9;
+    width: 34px;
+    height: 37px;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+
+}
+
+.searchIcon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.searchWindow {
+    border: solid 1px #7F5539;
+    background-color: #FFFFFF;
+    width: 318px;
+    height: 37px;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    left: -1px;
+}
+
+.searchWindowGroup {
+    padding-top: 16px;
+    padding-left: 12px;
+}
