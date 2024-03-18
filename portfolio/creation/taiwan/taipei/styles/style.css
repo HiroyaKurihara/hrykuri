@@ -1,0 +1,1146 @@
+@charset "utf-8";
+/* @media screen and (min-width:768px) */
+/* @media screen and (min-width:960px) */
+/*指定フォントは下記対応のこと
+font-family: 'Zen Kaku Gothic New', sans-serif; */
+/* 共通基本ルール
+余白：4倍数
+PCコンテンツ幅：1200px
+font: Zen Kaku Gothic New
+font-size: ベースSP12px　PC20px  4の倍数
+見出しfont-size: SP→24,12px,PC→48.24px
+SP幅:375px 
+PC幅:1366px */
+.nisemono {
+    /*カラーコードを表示するために使わないclassを指定してます。*/
+    color: #007AB7;
+    color: #6CBAD8;
+    color: #000000;
+    color: #FFFFFF;
+    color: rgba(0, 122, 183,0.9);/*007AB7の90％*/
+    color: rgba(237, 161, 132,0.2);/*EDA184の20％*/
+    color: rgba(100, 201, 155,0.2);/*64C99Bの20%*/
+    color: #F4F4F4;
+    color: rgba(0, 0, 0,0.25);/*000000の25%*/
+    color: #8F8F8F;
+}
+
+header,main,footer {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-size: 12px;
+    color: #000000;
+    width: 100%;
+    max-width: 1366px;
+    margin: 0 auto;
+}
+
+@media screen and (min-width:768px) {
+    header,main,footer {
+        font-size: 20px;
+        }
+}
+
+/* アニメーション*/
+.hidden {
+    display: none;
+}
+#roading {
+    background-color:#007AB7;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+#roading img{
+    width: 287px;
+    height: 117px;
+    position: absolute;
+    top: 275px;
+    left: 44px;
+}
+@media screen and (min-width:768px) {
+#roading img{
+    width: 318px;
+    height: 128px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+}
+
+
+@keyframes opening {
+    0%  {opacity: 0.0}
+    10% {opacity: 0.1}
+    20% {opacity: 0.2}
+    30% {opacity: 0.3}
+    40% {opacity: 0.4}
+    50% {opacity: 0.5}
+    60% {opacity: 0.6}
+    70% {opacity: 0.7}
+    80% {opacity: 0.8}
+    90% {opacity: 0.9}
+    100% {opacity: 1}
+    }
+    
+    body #main2 #roading img{
+        animation-name: opening;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    /* アニメーションここまで */
+
+/* ヘッダー */
+/*トップエリアの背景ありエリアまで*/
+.toparea {
+    width: 375px;
+    height: 677px;
+    background: url(../images/taipeiHero.png);
+    background-repeat: no-repeat;
+    background-size: 375px auto;
+    text-align: center;
+    position: relative;
+}
+.logoType {
+    position: absolute;
+    top: 8px;
+    left: 20px;
+    text-align: center;
+}
+.taipeiLogo {
+    position: absolute;
+    top: 120px;
+    left: 88px;
+    text-align: center;
+    z-index: 10;
+}
+.taipeiLogo img {
+    width: 199px;
+}
+.hiroText {
+    font-size: 12px;
+    color: #ffffff;
+    width: 248px;
+    height: 54.6px;
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+    text-align: left;
+}
+/* ハンバーガーメニュー */
+header nav {
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    display: none;
+    width: 225px;
+    height: 667px;
+    background: #000000;
+    opacity: 0.7;
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: bold;
+    z-index: 80;
+/* スライドメニュー*/
+    display: block;
+    right: -100%;
+    transition: right .5s;
+    text-align: center;
+/* ここまで */
+}
+header nav .liMenu {
+    font-size: 24px;
+}
+.liMenu {
+    margin: 0 0 60px 0;
+}
+.li40 {
+    margin: 0 0 40px 0;
+}
+.li20 {
+    margin: 0 0 20px 0;
+}
+/* スライドメニュー*/
+header nav.spOpen {
+    right: 0;
+}
+/* ここまで */
+.navLogo {
+    position: absolute;
+    top: 8px;
+    left: 12px;
+}
+.navLogo img{
+    width: 101px;
+    height: 40px;
+}
+header nav ul {
+    position: absolute;
+    top: 132px;
+    right: 23px;
+}
+header nav ul li a {
+    display: block;
+    border-radius: 5px;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+}
+#drawerToggle {
+    z-index: 200;
+    box-sizing: border-box;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+}
+#drawerToggle span {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    display: inline-block;
+    width: 25px;
+    height: 1.2px;
+    border-radius: 1.5px;
+    background-color: #ffffff;
+    transition: all .2s;
+}
+#drawerToggle.open span:nth-child(2) {
+    margin-top: 12px;
+    width: 80%;
+    transform: translate(-15%);
+}
+#drawerToggle.open span:last-child {
+    margin-top: 24px;
+}
+#drawerToggle.spOpen span:first-child {
+    transform: translateY(12px) rotate(45deg);
+}
+#drawerToggle.spOpen span:nth-child(2) {
+    display: none;
+}
+#drawerToggle.spOpen span:last-child {
+    transform: translateY(12px) rotate(-45deg);
+}
+/* ここまで */
+
+/* SNSlogo配置 */
+header .snsLogo {
+    position: absolute;
+    top:460px;
+    left: 20px;
+}
+header .snsLogo img {
+    display: block;
+    margin-bottom: 20px;
+}
+@media screen and (min-width:768px) {
+    .toparea {
+        width: 100%;
+        background: url(../images/taipei_hero_pc.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        text-align: center;
+        position: relative;
+    }
+    .logoType {
+        display: none;
+    }
+    .taipeiLogo {
+        position: absolute;
+        top: 20%;
+        left: 18%;
+        text-align: center;
+    }
+    .taipeiLogo img {
+        width: 80%;
+    }
+    .hiroText {
+        font-size: 20px;
+        line-height: 1.3;
+        color: #ffffff;
+        width: 367px;
+        height: 186px;
+        position: absolute;
+        right: 50px;
+        bottom: 180px;
+        text-align: left;
+    }
+    /* ハンバーガーメニュー PC */
+    .navLogo {
+        position: absolute;
+        top: 14px;
+        left: 20px;
+    }
+    #drawerToggle {
+        display: none;
+    }
+    header nav {
+        width: 100%;
+        height: 54px;
+        padding: 0 0 0 0;
+        display: inline-block;
+        position: absolute;
+        opacity: 1;
+        top: 20px;
+        left: 102px;
+        margin-right: 15px;
+        font-size: 24px;
+        font-weight: bold;
+        color: #ffffff;
+        background: none;
+    }
+    .liMenu {
+        display: none;
+    }
+    .liTop {
+        margin: 0 0 0 0;
+    }
+    header nav ul {
+        position: relative;
+        top: 0px;
+        right: 20px;
+        transform: unset;
+    }
+    header nav ul li {
+        display: inline-block;
+        border-radius: 2px;
+        padding: 30px 15px 0 0;
+    }
+    header nav ul li a {
+        display: block;
+        color: #ffffff;
+        text-decoration: none;
+        padding: 0 0 0 0;
+    }
+    header nav ul li:hover {
+        color: pink;
+    }
+    header nav .navLogo {
+        width: 516px;
+        height: 54px;
+        text-align: left;
+    }
+/* ハンバーガーメニュー PCここまで */
+
+/* PCSNSlogo配置 */
+header .snsLogo {
+    position: absolute;
+    top: 40%;
+    left: 30px;
+}
+header .snsLogo img {
+    display: block;
+    margin-bottom: 20px;
+}
+/* PCSNSlogo配置 ここまで*/
+}
+@media screen and (min-width:960px) {
+    .toparea {
+        width: 1366px;
+        height: 778px;
+        background: url(../images/taipei_hero_pc.jpg);
+        background-repeat: no-repeat;
+        text-align: center;
+        position: relative;
+    }
+    .logoType {
+        display: none;
+    }
+    .taipeiLogo {
+        position: absolute;
+        top: 94px;
+        left: 363px;
+        text-align: center;
+    }
+    .taipeiLogo img {
+        width: 300px;
+    }
+    .hiroText {
+        font-size: 20px;
+        line-height: 1.3;
+        color: #ffffff;
+        width: 467px;
+        height: 86px;
+        position: absolute;
+        right: 100px;
+        bottom: 40px;
+        text-align: left;
+    }
+    /* ハンバーガーメニュー PC */
+    .navLogo {
+        position: absolute;
+        top: 14px;
+        left: 20px;
+    }
+    #drawerToggle {
+        display: none;
+    }
+    #globalNav {
+        width: 1160px;
+        height: 54px;
+        padding: 0 0 0 0;
+        display: inline-block;
+        position: absolute;
+        opacity: 1;
+        top: 20px;
+        left: 102px;
+        margin-right: 15px;
+        font-size: 24px;
+        font-weight: bold;
+        color: #ffffff;
+        background: none;
+    }
+    .liMenu {
+        display: none;
+    }
+    header nav ul {
+        position: relative;
+        top: 0px;
+        left: 269px;
+        transform: unset;
+    }
+    header nav ul li {
+        display: inline-block;
+        border-radius: 2px;
+        padding: 30px 15px 0 0;
+    }
+    header nav ul li a {
+        display: block;
+        color: #ffffff;
+        text-decoration: none;
+        padding: 0 0 0 0;
+    }
+    header nav ul li:hover {
+        color: pink;
+    }
+    header nav .navLogo {
+        width: 516px;
+        height: 54px;
+        text-align: left;
+    }
+/* ハンバーガーメニュー PCここまで */
+
+/* PCSNSlogo配置 */
+header .snsLogo {
+    position: absolute;
+    top: 510px;
+    left: 110px;
+}
+header .snsLogo img {
+    display: block;
+    margin-bottom: 20px;
+}
+/* PCSNSlogo配置 ここまで*/
+}
+
+/*パンくず*/
+.pan {
+    font-size: 16px;
+    padding-top: 8px;
+    margin-bottom:40px;
+    border-bottom: 2px solid #000000;
+}
+.pan li {
+    display: inline;
+}
+.pan li:after {
+    content: '>';
+    text-align: -2px;
+}
+.pan li:last-child:after {
+    content: '';
+}
+
+
+
+
+/* 見出しタイトル共通 SPのみ */
+.midashi {
+    margin: 20px 0 30px;
+    position: relative;
+    height: 50px;
+}
+.midashi img {
+    width: 220px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.midashi h1 {
+    font-size: 24px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.midashi h1 span {
+    font-size: 50%;
+}
+/* ここまで */
+
+
+/* アトラクション */
+section article {
+    width: 80%;
+    margin: 0 auto;
+}
+section h2 {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+section article img {
+    display: block;
+    width: 100%;
+    height: 221px;
+    margin-bottom: 20px;
+}
+
+section article .kankouKiji {
+    background-color: rgba(108, 186, 216, 0.2);
+    padding: 8px 40px;
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+section article .sub {
+    display: flex;
+    justify-content: space-between;
+}
+section article .sub img {
+    width: 45%;
+    height: auto;
+}
+section article .pc {
+    display: none;
+}
+
+section article .kankouTime {
+    background-color: rgba(108, 186, 216, 0.2);
+    padding: 8px 0;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* 下線共通 */
+hr {
+    width: 223px;
+    height: 1px;
+    margin: 0 auto 48px;
+    color: #000000;
+}
+
+@media screen and (min-width:768px) {
+    hr {
+        width: 480px;
+        margin-bottom: 100px;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .midashi {
+        height: 200px;
+    }
+    .midashi img {
+        width: 530px;
+        height: auto;
+        top: 0;
+        left: 0;
+        transform: translate(10%,10%);
+    }
+    .midashi h1 {
+        font-size: 48px;
+        top: 0;
+        left: 0;
+        transform: translate(0%,0%);
+    }
+
+    section article {
+        width: 90%;
+        margin: 0 auto;
+        max-width: 1366px;
+    }
+    section h2 {
+        font-size: 38px;
+        text-align: left;
+    }
+
+    section .container {
+        width: 1160px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    section article .row {
+        width: 660px;
+    }
+    section article .col {
+        width: 500px;
+    }
+
+    section article img {
+        width: 600px;
+        height: 360px;
+        background-size: cover;
+    }
+
+    section article .sp {
+        display: none;
+    }
+    section article .pc {
+        display: block;
+    }
+    
+    section article .kankouKiji {
+        height: 360px;
+        padding: 18px 40px;
+    }
+    
+    section article .sub {
+        width: 600px;
+    }
+    section article .sub img {
+        width: 290px;
+        height: 167px;
+        background-size: cover;
+    }
+    
+    section article .kankouTime {
+        padding: 25px 0;
+        height: 167px;
+        line-height: 3;
+        margin-bottom: 60px;
+    }
+    
+    hr {
+        width: 480px;
+        margin-bottom: 100px;
+    }
+}
+/* ここまで */
+
+
+/* ナイトマーケット */
+section .nightKiji {
+    width: 60%;
+    margin: 0 auto 40px;
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+}
+section .nightKiji p {
+    padding: 12px 0;
+    line-height: 1.5;
+    letter-spacing: .03em;
+    text-align: justify;
+}
+section .yataiA {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* モーダルウィンドウ */
+.modal {
+    margin: 20px auto 0;
+}
+.inner {
+    width: min(100%, 1120px);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* モーダルを開くボタン */
+.modal_button {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto 20px;
+    gap: 30px 0;
+}
+.modal__trigger {
+    cursor: zoom-in;
+    background-image: url(../images/z_frame_sp.png);
+    background-repeat: no-repeat;
+    width: 131px;
+    height: 48px;
+    text-align: center;
+    padding: 16px 0;
+    font-weight: 700;
+}
+
+/* モーダル本体 */
+.modal__wrapper {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+}
+.modal__layer {
+    height: 100%;
+    background: rgba(50, 50, 50, .85);
+    cursor: pointer;
+}
+.modal__container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: min(calc(100% - 40px), 1000px);
+    height: calc(100% - 120px);
+    padding: 10px;
+    background: rgba(1, 128, 190, .9);
+}
+.modal__inner {
+    position: relative;
+    /* overflow-y: scroll; */
+    height: 100%;
+    padding: 20px 10px;
+}
+
+/* モーダルを閉じるボタン */
+.modal__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: opacity .6s;
+}
+.modal__close:hover {
+opacity: .6;
+}
+
+.modal__close:before,
+.modal__close:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 5px;
+    background: #000000;
+    content: '';
+}
+.modal__close:before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.modal__close:after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/* モーダル内のコンテンツ */
+.modal__content {
+    color: #ffffff;
+    margin: 0 auto;
+}
+.modal__content img {
+    width: 300px;
+    height: 223px;
+    background-size: cover;
+    margin-bottom: 20px;
+}
+.modal__title {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.modal__text {
+    line-height: 1.6;
+    text-align: justify;
+    padding: 0 12px;
+}
+.modal__text span {
+    display: block;
+    text-align: center;
+}
+/* モーダルウィンドウ ここまで */
+
+section .yataiB {
+    text-align: center;
+    margin: 0 0 40px;
+}
+
+@media screen and (min-width:768px) {
+    section .midashiRight {
+        margin-left: 570px;
+    }
+    section .nightKiji {
+        width: 420px;
+        margin-bottom: 80px
+    }    
+    section .nightKiji p {
+        padding: 45px 0;
+        letter-spacing: 0;
+    }
+    section .yataiA img {
+        width: 540px;
+        height: 264px;
+        object-fit: cover;
+    }
+
+    section .modal {
+        width: 500px;
+        margin-left: 60px;
+    }
+    
+    section .yataiB {
+        margin: 0 60px 80px 0;
+        text-align: end;
+        width: 1160px;
+    }
+    section .yataiB img {
+        width: 540px;
+        height: 264px;
+        object-fit: cover;
+    }
+
+    /* モーダルウィンドウ */
+    /* モーダルを開くボタン */
+    .modal_button {
+        width: 100%;
+        float: left;
+    }
+    .modal__trigger {
+        background-image: url(../images/z_frame_pc.png);
+        background-repeat: no-repeat;
+        width: 210px;
+        height: 90px;
+        padding: 32px 0;
+    }
+
+    /* モーダル本体 */
+    .modal__container {
+        width: min(calc(100% - 40px), 1366px);
+        height: 604px;
+        padding: 20px 50px;
+    }
+
+    /* モーダルを閉じるボタン */
+    .modal__close:before,
+    .modal__close:after {
+        top: 60%;
+        left: 40%;
+        width: 40px;
+        height: 8px;
+    }
+    .modal__title {
+        font-size: 36px;
+        text-align: start;
+        margin-bottom: 20px;
+    }
+    .modal__content img {
+        width: 600px;
+        height: 468px;
+        background-size: cover;
+        margin-bottom: auto;
+        float: left;
+    }
+    .modal__text {
+        line-height: 1.6;
+        padding: 0 50px;
+        margin-left: 620px;
+        margin-top: -10px;
+    }
+}
+/* モーダルウィンドウ ここまで */
+
+/* アクセス */
+section .access {
+    text-align: center;
+    margin-bottom: 35px;
+}
+section .access p {
+    margin-bottom: 10px;
+}
+section .access hr {
+    width: 223px;
+    height: 1px;
+    color: #000000;
+    margin-bottom: 40px;
+}
+section .access .sp {
+    display: block;
+    margin: 0 auto;
+}
+section .access .pc {
+    display: none;
+}
+section .traffic {
+    width: 60%;
+    margin: 0 auto;
+}
+section .traffic h3 {
+    margin-bottom: 12px;
+}
+section .traffic p {
+    text-align: justify;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+section .card {
+    text-align: center;
+    margin: 30px 0 60px;
+}
+section .card img {
+    width: 95px;
+    height: 61px;
+}
+
+@media screen and (min-width:768px) {
+    section .access {
+        text-align: left;
+        margin: 60px;
+    }
+    section .access p {
+        font-size: 24px;
+        margin-left: 60px;
+        margin-bottom: 30px;
+    }
+    section .access hr {
+        width: 420px;
+        margin-left: 40px;
+    }
+    section .access .pc {
+        display: block;
+        margin: 0 auto;
+    }
+    section .access .sp {
+        display: none;
+    }
+    section .traffic {
+        width: 1160px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 45px 5%;
+        justify-content: center;
+    }
+    section .traffic .wrap {
+        width: 480px;
+        font-size: 1.5rem;
+        padding: 20px 40px;
+    }
+    section .traffic h3 {
+        margin-bottom: 40px;
+    }
+    section .traffic p {
+        margin-bottom: 0;
+        line-height: 1.4;
+    }
+    section .card {
+        text-align: end;
+        width: 1160px;
+    }
+    section .card img {
+        width: 246px;
+        height: 155px;
+        margin-right: 80px;
+    }
+}
+/* ここまで */
+
+
+/* フッター */
+footer {
+    background-color: #007AB7;
+    color: #ffffff;
+    text-align: center;
+    font-size: 12px;
+}
+footer .flag {
+    margin: 0 auto;
+    padding: 20px 0 10px;
+}
+footer .flag img {
+    width: 32px;
+    height: auto;
+}
+footer nav {
+    width: 60%;
+    margin: 0 auto 35px;
+    text-align: left;
+}
+footer nav ul li {
+    border-bottom: 1px solid #ffffff;
+    padding: 12px 0 4px;
+}
+footer .icons {
+    display: flex;
+    width: 90%;
+    margin: 0 auto 12px;
+    align-items: center;
+}
+footer .icons .logo img {
+    width: 71px;
+    height: auto;
+    margin-right: 16px;
+}
+footer .icons .sns img {
+    padding-right: 16px;
+}
+footer p {
+    border-top: 1px #03A9F4 solid;
+    font-size: 10px;
+    padding: 20px 0 20px;
+}
+@media screen and (min-width:768px) {
+    .footerBase {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+    }
+    footer .flag {
+        height: 116px;
+        width: 100%;
+        margin: 0 auto;        
+        padding: 40px 0 0 0;
+    }
+    footer .flag img {
+        width: 64px;
+        height: 48px;
+        padding: 0 0 0 0;
+    }
+    .footerBase nav {
+        font-size: 20px;
+        margin-right: 10%;
+    }
+    footer .icons .logo {
+        width: 256px;
+        margin-right: 10%;
+        align-self: flex-end;
+    }
+    footer .icons .logo img {
+        width: 256px;
+    }
+    footer .icons .sns {
+        display: flex;
+        justify-content: space-between;
+        width: 182.9px;
+        margin: 0 auto;
+        align-self: flex-end;
+    }
+    footer .icons .sns img {
+        width: 32px;
+        height: 32px;
+        padding: 0 0;
+    }
+    footer p {
+        font-size: 12px;
+        padding: 21px 0 21px 0;
+    }
+}
+@media screen and (min-width:960px) {
+    .footerBase {
+        width: 1160px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+    }
+    footer .flag {
+        height: 116px;
+        width: 100%;
+        margin: 0 auto;        
+        padding: 40px 0 0 0;
+    }
+    footer .flag img {
+        width: 64px;
+        height: 48px;
+        padding: 0 0 0 0;
+    }
+    .footerBase nav {
+        font-size: 20px;
+        width: 452px;
+        margin-right: 120px;
+    }
+    footer .icons .logo {
+        width: 256px;
+        margin-right: 269.1px;
+        align-self: flex-end;
+    }
+    footer .icons .logo img {
+        width: 256px;
+    }
+    footer .icons .sns {
+        display: flex;
+        justify-content: space-between;
+        width: 182.9px;
+        margin: 0 auto;
+        align-self: flex-end;
+    }
+    footer .icons .sns img {
+        width: 32px;
+        height: 32px;
+        padding: 0 0;
+    }
+    footer p {
+        font-size: 12px;
+        padding: 21px 0 21px 0;
+    }
+}
+/* ここまで */
+
+/* スクロール */
+html {
+    scroll-behavior: smooth;
+}
+
+.scl a {
+    position: fixed;
+    bottom: 60px;
+    right: 10px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    text-decoration: none;
+    background-color: #333333;
+    opacity: 0.7;
+    display: block;
+    text-align: center;
+}
+    
+.scl a::before {
+    position: absolute;
+    top: 7px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 16px;
+    height: 16px;
+    margin: auto;
+    content: '';
+    transform: rotate(-45deg);
+    border-top: 4px solid #ffffff;
+    border-right: 4px solid #ffffff;
+}
+
+@media screen and (min-width:768px) {
+    .scl a {
+        bottom: 40px;
+        right: 14px;  
+        width: 100px;
+        height: 100px;
+    }
+    .scl a::before {
+        width: 40px;
+        height: 40px;
+        border-top: 8px solid #ffffff;
+        border-right: 8px solid #ffffff;    
+    }  
+}
