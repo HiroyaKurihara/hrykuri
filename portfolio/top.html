@@ -3,8 +3,9 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/stylePortfolio.css">
   <title>栗原大弥 ポートフォリオ</title>
 </head>
 
@@ -37,7 +38,7 @@
       </div>
     </section>
     <section class="creation">
-      <h2>作成したもの</h2>
+      <h2 class="sakuseishitamono">作成したもの</h2>
       <!-- 元になる要素 -->
       <div id="id_origin_0" class="origin">
         <p>成果物：<span></span></p>
@@ -46,27 +47,67 @@
         <button data-index="0" onclick="clearButtonClick()" class="clear">削除</button>
       </div>
       <!-- 追加先の要素 -->
-      <div id="parent">
-        <div id="id_origin_1" class="origin">
-          <p>成果物：<span>リフォームのホームページ</span></p>
-          <p>説明：<span>南柏職業訓練校のhtml,cssの学習過程の課題で作成したものです。</span></p>
-          <p>リンク：<a href="./creation/reform/index.html"
-              class="link">http://cf163781.cloudfree.jp/portfolio/creation/reform/index.html</a>
-          </p>
-          <button data-index="1" onclick="clearButtonClick()" class="clear">削除</button>
+      <div id="parent"><!-- スライドの外枠 -->
+        <div class="slide-wrapper">
+          <!-- スライド（コンテンツ） -->
+          <div id="slide" class="slide">
+            <div>
+              <div id="id_origin_1" class="origin">
+                <p>成果物：<span>リフォームのホームページ</span></p>
+                <p>説明：<span>南柏職業訓練校のhtml,cssの学習過程の課題で作成したものです。</span></p>
+                <p>リンク：<a href="./creation/reform/index.html"
+                    class="link">http://cf163781.cloudfree.jp/portfolio/creation/reform/index.html</a>
+                </p>
+                <div class="iframeWrapper">
+                  <iframe src="./creation/reform/index.html" allowTransparency="true" class="iframe1"></iframe>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div id="id_origin_2" class="origin">
+                <p>成果物：<span>台湾の観光案内のホームページ</span></p>
+                <p>説明：<span>南柏職業訓練校のhtml,css,javascriptの学習過程の課題で作成したものです。</span></p>
+                <p>リンク：<a href="./creation/taiwan/index.html"
+                    class="link">http://cf163781.cloudfree.jp/portfolio/creation/taiwan/index.html</a>
+                </p>
+                <div class="iframeWrapper">
+                  <iframe src="./creation/taiwan/index.html" allowTransparency="true" class="iframe2"></iframe>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div id="id_origin_3" class="origin">
+                <p>成果物：<span>ドーナツ店のホームページ</span></p>
+                <p>説明：<span>南柏職業訓練校のhtml,cssの学習過程の課題で作成したものです。</span></p>
+                <p>リンク：<a href="./creation/ccdonuts/ccdonuts.html"
+                    class="link">http://cf163781.cloudfree.jp/portfolio/creation/reform/index.html</a>
+                </p>
+                <div class="iframeWrapper">
+                  <iframe src="./creation/ccdonuts/ccdonuts.html" allowTransparency="true" class="iframe3"></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 左右のボタン -->
+          <span id="prev" class="prev"></span>
+          <span id="next" class="next"></span>
+          <!-- インジケーター -->
+          <ul class="indicator" id="indicator">
+            <li class="list"></li>
+            <li class="list"></li>
+            <li class="list"></li>
+          </ul>
         </div>
       </div>
-    </section>
-    <section class="addForm">
-      <div>成果物：<input type="text" id="addCreation"></div>
-      <div>説明：　<textarea id="information" wrap="addSoft"></textarea></div>
-      <div>リンク：<input type="text" id="addLink"></div>
-      <div>pass：　<input type="text" id="password"></div>
-      <input type="button" value="追加" id="add">
+      <ul class="creationIndicator">
+        <li class="creationList">リフォームのホームページ</p>
+        <li class="creationList">台湾の観光案内のホームページ</p>
+        <li class="creationList">ドーナツ店のホームページ</p>
+      </ul>
     </section>
   </main>
   <footer></footer>
-  <script src="./script/thread.js"></script>
+  <script src="script/script.js"></script>
 </body>
 
 </html>

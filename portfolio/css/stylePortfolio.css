@@ -1,0 +1,221 @@
+@charset "UTF-8";
+
+body {
+    background-color: darkslateblue;
+}
+
+h1 {
+    color: tomato;
+    font-size: xx-large;
+    margin: 15px auto;
+    text-align: center;
+}
+
+.jikoshoukai {
+    width: 400px;
+    margin: 0 auto;
+    padding: 10px;
+    border: solid 5px deeppink;
+    background-color: midnightblue;
+}
+
+.creation {
+    width: 700px;
+    margin: 50px auto;
+    border: solid 5px yellowgreen;
+    background-color: darkmagenta;
+    position: relative;
+}
+
+*,
+body,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+/* ↓ スライドの外枠 */
+.slide-wrapper {
+    /* width: 100%; */
+    /* height: 300px; */
+    position: relative;
+    overflow: hidden;
+    /* はみ出したスライドを隠す */
+}
+
+/*  ↓ スライド（コンテンツ） */
+.slide {
+    /*スライド全体 */
+    /* width: 300%; */
+    /* height: 100%; */
+    display: flex;
+    transition: all 0.3s;
+}
+
+.slide div {
+    /* スライド */
+    /* width: 33.33%; */
+    /* height: 100%; */
+    /* font-size: 16px; */
+    /* display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center; */
+}
+
+.slide1 {
+    /* スライドさせるために必要なクラス */
+    transform: translateX(0);
+}
+
+.slide2 {
+    /* スライドさせるために必要なクラス */
+    transform: translateX(-100%);
+}
+
+.slide3 {
+    /* スライドさせるために必要なクラス */
+    transform: translateX(-200%);
+}
+
+/* ↓ 左右のボタン */
+.next {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    right: 2.5px;
+    bottom: 50%;
+    z-index: 10;
+    cursor: pointer;
+    border-top: solid 3px #000;
+    border-right: solid 3px #000;
+    -webkit-transform: rotate(45deg) translateY(50%);
+    /* transform: rotate(45deg) translateY(50%); */
+}
+
+.prev {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    left: 12.5px;
+    bottom: 50%;
+    z-index: 10;
+    cursor: pointer;
+    border-top: solid 3px #000;
+    border-right: solid 3px #000;
+    -webkit-transform: rotate(-135deg) translateY(-50%);
+    /* transform: rotate(-135deg) translateY(-50%); */
+}
+
+/* ↓ インジケーター */
+.indicator {
+    width: 100%;
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    column-gap: 18px;
+    z-index: 10;
+    justify-content: center;
+    align-items: center;
+}
+
+.indicator li {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    list-style: none;
+    background-color: #fff;
+    border: 2px #000 solid;
+    cursor: pointer;
+}
+
+.indicator li:first-of-type {
+    background-color: #000;
+}
+
+.creationIndicator {
+    position: absolute;
+    top: 10%;
+    right: -35%;
+}
+
+.creationList {
+    margin: 5px 0;
+    color: navy;
+    background-color: rgba(255, 255, 255, 0.5);
+    /* 半透明の白色 */
+    cursor: pointer;
+}
+
+.creationList:hover {
+    text-decoration: underline;
+}
+
+.creationIndicator li:first-of-type {
+    color: mediumorchid;
+    /* 元の文字色プロパティ */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* 半透明の黒色 */
+    /* .listと同じ背景色に設定 */
+}
+
+
+h2 {
+    color: forestgreen;
+    font-size: x-large;
+}
+
+.sakuseishitamono {
+    margin: 5px;
+}
+
+p {
+    color: darkgoldenrod;
+}
+
+#id_origin_0 {
+    display: none;
+}
+
+.origin {
+    border: solid 5px forestgreen;
+    background-color: brown;
+    padding: 10px;
+    margin: 10px 20px 40px;
+    width: 650px;
+}
+
+.origin p {
+    margin: 5px 0;
+}
+
+.iframeWrapper {
+    height: 450px;
+}
+
+iframe {
+    position: relative;
+    width: 1400px;
+    height: 1000px;
+    transform-origin: 0 0;
+    transform: scale(0.45);
+    background-color: white;
+    right: 5px;
+}
+
+.iframe3 {
+    position: relative;
+    transform: scale(0.45);
+}
+
+.link {
+    color: cadetblue;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
