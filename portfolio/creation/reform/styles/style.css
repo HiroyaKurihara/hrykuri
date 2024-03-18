@@ -1,14 +1,41 @@
 @charset "utf-8";
 
+@media screen and (min-width:768px) {
+
+    main,
+    header,
+    footer {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width:960px) {
+
+    main,
+    header,
+    footer {
+        width: 1366px;
+        margin: 0 auto;
+    }
+}
+
 h1 {
     color: #B71B26;
     font-family: 'Jost', sans-serif;
     font-size: 35px;
+    margin: 24px;
+}
+
+.menu li a {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: medium;
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: 10%;
 }
 
 .hero2 {
-    margin-top: 50px;
-    margin-bottom: 200px;
     background-color: #D9D9D9;
 }
 
@@ -33,18 +60,74 @@ li:hover {
     filter: invert();
 }
 
+.cont {
+    margin-top: 160px;
+}
+
 h2 {
     text-align: center;
-    font-family: 'Playfair Display', serif;
-    font-size: 65px;
-    margin-top: 10px;
-    margin-bottom: 20px;
+    font-family: 'Noto Serif JP', serif;
+    font-weight: bold;
+    font-size: 42px;
+    line-height: 42px;
+    letter-spacing: 10%;
 }
 
 .subTitle {
     text-align: center;
-    margin-bottom: 50px;
+    margin-top: 16px;
+    margin-bottom: 48px;
     color: #223E69;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: normal;
+    letter-spacing: 10%;
+    /* 文字間隔を追加 */
+}
+
+.subTitle:before,
+.subTitle:after {
+    content: "";
+    display: inline-block;
+    /* インラインブロック要素に変更 */
+    width: 60.5px;
+    /* 60.5pxに指定 */
+    height: 1px;
+    background-color: #223E69;
+    /* 線の色 */
+    margin-top: 8px;
+    /* 必要に応じて調整 */
+    margin-bottom: 8px;
+    /* 必要に応じて調整 */
+    vertical-align: middle;
+    /* テキストのベースラインに合わせる */
+}
+
+.subTitle .sekou:before,
+.subTitle .sekou:after {
+    background-color: #223E69;
+    /* 88行目以外の色 */
+}
+
+.subTitle.sekou88 {
+    color: #B71B26;
+    /* 文字の色をB71B26に設定 */
+}
+
+.subTitle.sekou88:before,
+.subTitle.sekou88:after {
+    background-color: #B71B26;
+    /* 88行目の色をB71B26に設定 */
+}
+
+
+.subTitle:before {
+    margin-right: 8px;
+}
+
+.subTitle:after {
+    margin-left: 8px;
 }
 
 h3 {
@@ -53,8 +136,6 @@ h3 {
     font-family: 'Noto Sans JP', sans-serif;
     font-family: 'Playfair Display', serif;
     font-size: 28px;
-    margin-top: 15px;
-    margin-bottom: 15px;
 }
 
 p {
@@ -62,20 +143,26 @@ p {
     font-family: 'Playfair Display', serif;
 }
 
+.familyText {
+    width: 1020px;
+    margin: 24px auto 0 auto;
+}
+
 .SERVICE {
     margin-top: 200px;
 }
 
-.cont-3 {
+#cont-3 {
     background-color: rgba(34, 62, 105, 0.05);
+    padding-top: 48px;
 }
 
 .sekou {
     color: #B71B26;
 }
 
-.cont-4 {
-    text-align: center;
+#cont-4 {
+    /* text-align: center; */
 }
 
 .Q-1 {
@@ -100,30 +187,140 @@ p {
 
 .Q-2 {
     width: 700px;
+    margin-left: 8px;
 }
 
 .A-2 {
     width: 700px;
+    margin-left: 8px;
 }
 
 .QA {
     display: flex;
     align-items: center;
-    margin: 10px 0;
+    margin: 10px auto;
+    width: 1020px;
 }
 
 .bg-2 {
     background-color: rgba(34, 62, 105, 0.15);
 }
 
+#contact {
+    padding-top: 48px;
+}
+
 .bg-1 {
     background-color: rgba(255, 255, 255, 0.5);
+    width: 1020px;
+    margin: 0 auto;
 }
 
 .hissu {
     background-color: #B71B26;
-    border-radius: 8%;
+    border-radius: 8px;
     color: #FFFFFF;
+    font-size: 16px;
+    line-height: 24px;
+    width: 58px;
+    letter-spacing: 0.1em;
+    /* em 単位での指定 */
+    display: inline-block;
+    text-align: center;
+}
+
+label {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+    /* 10%相当 */
+}
+
+input[type="radio"] {
+    width: 24px;
+    height: 24px;
+}
+
+.contact-text {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+    color: #333333;
+}
+
+input {
+    background-color: #FFFFFF;
+}
+
+.name input,
+.spell input,
+.call input {
+    width: 332px;
+    height: 52px;
+}
+
+.access input:nth-of-type(1) {
+    width: 222px;
+    height: 52px;
+}
+
+.access input:nth-of-type(2) {
+    width: 664px;
+    height: 52px;
+}
+
+.contact-text input[type="email"] {
+    width: 664px;
+    height: 52px;
+}
+
+/* お問い合わせ種別 */
+.question {
+    margin-left: 80px;
+}
+
+/* お名前 */
+.name {
+    margin-left: 190px;
+}
+
+/* フリガナ */
+.spell {
+    margin-left: 168px;
+}
+
+/* 電話番号 */
+.call {
+    margin-left: 168px;
+}
+
+/* 住所 */
+.access {
+    margin-left: 212px;
+}
+
+/* メールアドレス */
+input[type="email"] {
+    margin-left: 102px;
+}
+
+/* メールアドレス(確認用) */
+input[type="email"]:last-child {
+    margin-left: 16px;
+}
+
+/* inquiry-content */
+.inquiry-content {
+    margin-left: 80px;
+}
+
+.inquiry-content input[type="text"] {
+    width: 664px;
+    height: 208px;
 }
 
 .kakunin {
@@ -160,6 +357,7 @@ footer {
 
     .list-p {
         width: 362.5px;
+        margin: 24px auto;
     }
 
     .moreBtn {
@@ -372,7 +570,7 @@ footer {
     .moreBtn {
         display: flex;
         justify-content: flex-end;
-        margin: 20px 0 300px;
+        margin-top: 20px;
         width: 400px;
     }
 
@@ -393,35 +591,46 @@ footer {
         align-items: center;
     }
 
-    .arrow1 {
+    .arrow {
+        transform: scale(0.5, 1);
+        margin: 0 auto;
+    }
+
+    .arrowSpan {
+        display: flex;
+        align-items: center;
+        width: 112px;
+    }
+
+    #arrow1 {
         color: rgba(183, 27, 38, 0.6);
         font-size: 50px;
         display: flex;
         align-items: center;
     }
 
-    .arrow2 {
+    #arrow2 {
         color: rgba(183, 27, 38, 0.7);
         font-size: 50px;
         display: flex;
         align-items: center;
     }
 
-    .arrow3 {
+    #arrow3 {
         color: rgba(183, 27, 38, 0.8);
         font-size: 50px;
         display: flex;
         align-items: center;
     }
 
-    .arrow4 {
+    #arrow4 {
         color: rgba(183, 27, 38, 0.9);
         font-size: 50px;
         display: flex;
         align-items: center;
     }
 
-    .arrow5 {
+    #arrow5 {
         color: rgba(183, 27, 38, 1);
         font-size: 50px;
         display: flex;

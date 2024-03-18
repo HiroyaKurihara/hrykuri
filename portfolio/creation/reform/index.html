@@ -36,20 +36,21 @@
     <img src="images/hero 2.png" class="hero2" alt="hero2">
     <img src="images/hero 3.png" class="hero3" alt="hero3">
     <nav>
-        <div class="cont-1" alt="cont-1">
+        <div id="cont-1" alt="cont-1" class="cont">
             <section id="concept">
                 <h2>CONCEPT</h2>
-                <p class="subTitle" alt="subTitle"><span>――――――― </span>コンセプト<span> ―――――――</span></p>
+                <p class="subTitle" alt="subTitle">コンセプト</p>
                 <h3>家族が笑顔になれる場所</h3>
-                <p>家族が集う、温かく居心地の良い空間づくりを目指して、幅広い世代の方に安心して過ごしていただける空間づくりや、お手入れのしやすい素材を使用したリフォームをご提案いたします。</p>
+                <p class="familyText">
+                    家族が集う、温かく居心地の良い空間づくりを目指して、幅広い世代の方に安心して過ごしていただける空間づくりや、お手入れのしやすい素材を使用したリフォームをご提案いたします。</p>
             </section>
         </div>
     </nav>
     <nav>
-        <div class="cont-2" alt="cont-2">
+        <div id="cont-2" alt="cont-2" class="cont">
             <section id="service">
                 <h2 class="SERVICE">SERVICE</h2>
-                <p class="subTitle" alt="subTitle"><span>――――――― </span>サービス<span> ―――――――</span></p>
+                <p class="subTitle" alt="subTitle">サービス</p>
                 <div class="list-1-2-3" alt="list-1-2-3">
                     <div class="list-1" alt="list-1">
                         <img src="images/list-1-img.png" alt="list-1-img">
@@ -81,33 +82,41 @@
         </div>
     </nav>
     <nav>
-        <div class="cont-3" alt="cont-3">
+        <div id="cont-3" alt="cont-3" class="cont">
             <section id="flow">
                 <h2>FLOW</h2>
-                <p class="subTitle" alt="subTitle"><span class="sekou">――――――― </span>
-                    <span class="sekou">施工の流れ</span><span class="sekou"> ―――――――</span>
-                </p>
+                <p class="subTitle sekou88" alt="subTitle">施工の流れ</p>
                 <div class="list">
                     <a class="flow">
                         <p>ご相談</p>
                     </a>
-                    <p class="arrow1">▶</p>
+                    <span class="arrowSpan">
+                        <p id="arrow1" class="arrow">▶</p>
+                    </span>
                     <a class="flow">
                         <p>現地調査</p>
                     </a>
-                    <p class="arrow2">▶</p>
+                    <span class="arrowSpan">
+                        <p id="arrow2" class="arrow">▶</p>
+                    </span>
                     <a class="flow">
                         <p>お見積り</p>
                     </a>
-                    <p class="arrow3">▶</p>
+                    <span class="arrowSpan">
+                        <p id="arrow3" class="arrow">▶</p>
+                    </span>
                     <a class="flow">
                         <p>ご契約</p>
                     </a>
-                    <p class="arrow4">▶</p>
+                    <span class="arrowSpan">
+                        <p id="arrow4" class="arrow">▶</p>
+                    </span>
                     <a class="flow">
                         <p>施工</p>
                     </a>
-                    <p class="arrow5">▶</p>
+                    <span class="arrowSpan">
+                        <p id="arrow5" class="arrow">▶</p>
+                    </span>
                     <a class="flow">
                         <p>お引渡し</p>
                     </a>
@@ -116,11 +125,10 @@
         </div>
     </nav>
     <nav>
-        <div class="cont-4" alt="cont-4">
+        <div id="cont-4" alt="cont-4" class="cont">
             <section id="q&a">
                 <h2>Q&A</h2>
-                <p class="subTitle" alt="subTitle"><span class="yokuaru">――――――― </span><span
-                        class="yokuaru">よくあるご質問</span><span class="yokuaru"> ―――――――</span></p>
+                <p class="subTitle" alt="subTitle">よくあるご質問</p>
                 <div class="QA-1" alt="QA-1">
                     <div class="QA">
                         <p class="Q-1" alt="Q-1">Q.</p>
@@ -145,43 +153,45 @@
                 </div>
             </section>
         </div>
-        <div class="cont-5" alt="cont-5">
     </nav>
     <nav class="bg-2">
-        <section id="contact">
-            <h2>CONTACT</h2>
-            <p class="subTitle" alt="subTitle"><span>――――――― </span>お問い合わせ<span> ―――――――</span></p>
-            <div class="bg-1">
-                <div class="question" alt="お問い合わせ種別">
-                    <p>お問い合わせ種別
-                        <span class="hissu">必須</span>
-                    <p>
-                        <label><input type="radio" name="attend" value="資料請求"> 資料請求</label>
-                        <label><input type="radio" name="attend" value="ご相談"> ご相談</label>
-                    </p>
+        <div id="cont-5" alt="cont-5" class="cont">
+            <section id="contact">
+                <h2>CONTACT</h2>
+                <p class="subTitle" alt="subTitle">お問い合わせ</p>
+                <div class="bg-1">
+                    <div class="question contact-text" alt="お問い合わせ種別">
+                        <a>お問い合わせ種別
+                            <span class="hissu">必須</span>
+                            <label><input type="radio" name="attend" value="資料請求"> 資料請求</label>
+                            <label><input type="radio" name="attend" value="ご相談"> ご相談</label>
+                        </a>
+                    </div>
+                    <div class="name contact-text" alt="お名前">
+                        <a>お名前<span class="hissu">必須</span></a><br class="hissuBr"><input type="text" name="message">
+                    </div>
+                    <div class="spell contact-text" alt="フリガナ">
+                        <a>フリガナ<span class="hissu">必須</span></a><br class="hissuBr"><input type="text" name="message">
+                    </div>
+                    <div class="call contact-text" alt="電話番号">
+                        <a>電話番号<span class="hissu">必須</span></a><br class="hissuBr"><input type="tel" name="message">
+                    </div>
+                    <div class="access contact-text" alt="住所">
+                        <a>住所<span class="hissu">必須</span>〒</a><br class="hissuBr"><input type="text"
+                            name="message"><br><input type="text" name="message">
+                    </div>
+                    <p class="contact-text">メールアドレス<span class="hissu">必須</span><br class="hissuBr"><input type="email"
+                            name="user_mail"></p>
+                    <p class="contact-text">メールアドレス(確認用)<span class="hissu">必須</span><br class="hissuBr"><input
+                            type="email" name="user_mail"></p>
+                    <div class="inquiry-content contact-text" alt="お問い合わせ内容">
+                        <p class="contact-text">お問い合わせ内容</p><input type="text" name="message">
+                    </div>
+                    <span class="kakunin">
+                        <input type="submit" name="submit" value="入力内容を確認する▶"></span>
                 </div>
-                <div class="name" alt="お名前">
-                    <p>お名前<span class="hissu">必須</span></p><br class="hissuBr"><textarea name="message"></textarea>
-                </div>
-                <div class="spell" alt="フリガナ">
-                    <p>お名前<span class="hissu">必須</span></p><br class="hissuBr"><textarea name="message"></textarea>
-                </div>
-                <div class="call" alt="電話番号">
-                    <p>お名前<span class="hissu">必須</span></p><br class="hissuBr"><textarea name="message"></textarea>
-                </div>
-                <div class="access" alt="住所">
-                    <p>お名前<span class="hissu">必須</span>〒</p><br class="hissuBr"><textarea
-                        name="message"></textarea><br><textarea name="message"></textarea>
-                </div>
-                <p>メールアドレス<span class="hissu">必須</span><br class="hissuBr"><input type="email" name="user_mail"></p>
-                <p>メールアドレス(確認用)<span class="hissu">必須</span><br class="hissuBr"><input type="email" name="user_mail">
-                </p>
-                <div class="お問い合わせ内容" alt="お問い合わせ内容">
-                    <p>お問い合わせ内容</p><textarea name="message"></textarea>
-                </div><span class="kakunin">
-                    <input type="submit" name="submit" value="入力内容を確認する▶"></span>
-            </div>
-        </section>
+            </section>
+        </div>
     </nav>
     <div class="pageTop" alt="pageTop">
         <a href="#pageTop" class="arrow6">^</a>
