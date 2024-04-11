@@ -161,10 +161,10 @@
                 <p class="subTitle" alt="subTitle">お問い合わせ</p>
                 <div class="bg-1">
                     <div class="question contact-text" alt="お問い合わせ種別">
-                        <a>お問い合わせ種別
-                            <span class="hissu">必須</span>
-                            <label><input type="radio" name="attend" value="資料請求"> 資料請求</label>
-                            <label><input type="radio" name="attend" value="ご相談"> ご相談</label>
+                        <a>お問い合わせ種別<span class="hissu">必須</span>
+                            <span class="questionLabel"><label><input type="radio" name="attend" value="資料請求">
+                                    資料請求</label>
+                                <label><input type="radio" name="attend" value="ご相談"> ご相談</label></span>
                         </a>
                     </div>
                     <div class="name contact-text" alt="お名前">
@@ -177,18 +177,25 @@
                         <a>電話番号<span class="hissu">必須</span></a><br class="hissuBr"><input type="tel" name="message">
                     </div>
                     <div class="access contact-text" alt="住所">
-                        <a>住所<span class="hissu">必須</span>〒</a><br class="hissuBr"><input type="text"
-                            name="message"><br><input type="text" name="message">
+                        <a class="accessA"><span class="accessCenter">住所<span class="hissu">必須</span></span><br
+                                class="postBr"><a class="post">〒</a></a><br class="hissuBr">
+                        <input type="text" name="postal_code" class="postal-code">
+                        <input type="text" name="address" class="address-field">
                     </div>
-                    <p class="contact-text">メールアドレス<span class="hissu">必須</span><br class="hissuBr"><input type="email"
-                            name="user_mail"></p>
-                    <p class="contact-text">メールアドレス(確認用)<span class="hissu">必須</span><br class="hissuBr"><input
-                            type="email" name="user_mail"></p>
+                    <div class="email" alt="メールアドレス">
+                        <p class="contact-text">メールアドレス<span class="hissu">必須</span><br class="hissuBr"><input
+                                type="email" name="user_mail"></p>
+                    </div>
+                    <div class="email-confirm" alt="メールアドレス(確認用)">
+                        <p class="contact-text">メールアドレス(確認用)<span class="hissu">必須</span><br class="hissuBr"><input
+                                type="email" name="user_mail"></p>
+                    </div>
                     <div class="inquiry-content contact-text" alt="お問い合わせ内容">
-                        <p class="contact-text">お問い合わせ内容</p><input type="text" name="message">
+                        <a class="contact-text">お問い合わせ内容</a><input type="text" name="message">
                     </div>
-                    <span class="kakunin">
-                        <input type="submit" name="submit" value="入力内容を確認する▶"></span>
+                    <div class="kakunin">
+                        <input type="submit" name="submit" value="入力内容を確認する"><span class="submit-arrow">▶</span>
+                    </div>
                 </div>
             </section>
         </div>
@@ -198,7 +205,8 @@
     </div>
 </main>
 <footer>
-    <p>©2023 Design House Renovations</p>
+    <a>©</a>
+    <p>2023 Design House Renovations</p>
 </footer>
 
 </html>

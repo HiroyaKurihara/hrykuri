@@ -1,22 +1,20 @@
 @charset "utf-8";
 
-@media screen and (min-width:768px) {
+header,
+main,
+footer {
+    margin: 0 auto;
 
-    main,
-    header,
-    footer {
+    @media screen and (min-width:768px) {
         width: 100%;
-        margin: 0 auto;
     }
-}
 
-@media screen and (min-width:960px) {
-
-    main,
-    header,
-    footer {
+    @media screen and (min-width:960px) {
         width: 1366px;
-        margin: 0 auto;
+    }
+
+    @media screen and (max-width:768px) {
+        width: 375px;
     }
 }
 
@@ -25,6 +23,28 @@ h1 {
     font-family: 'Jost', sans-serif;
     font-size: 35px;
     margin: 24px;
+
+    @media screen and (max-width:768px) {
+        margin: 16px 0 16px 12px;
+        font-size: 20.3px;
+        width: 240px;
+    }
+}
+
+li {
+    @media screen and (min-width:768px) {
+        width: 125px;
+        background-color: #FFFFFF;
+        padding: 15px 0;
+        text-align: center;
+    }
+
+    @media screen and (max-width:768px) {
+        background-color: #FFFFFF;
+        padding: 15px 0;
+        text-align: center;
+        font-size: 25px;
+    }
 }
 
 .menu li a {
@@ -37,22 +57,33 @@ h1 {
 
 .hero2 {
     background-color: #D9D9D9;
+
+    @media screen and (max-width:768px) {
+        display: none;
+    }
 }
 
 .hero3 {
-    margin-top: 50px;
-    margin-bottom: 200px;
+    margin-bottom: 0;
     background-color: #D9D9D9;
+
+    @media screen and (min-width:768px) {
+        display: none;
+        margin-top: 50px;
+        margin-bottom: 200px;
+    }
 }
 
 /* メニューアイコンを画面右上に固定しています */
 .gMenu {
-    cursor: pointer;
-    position: absolute;
-    right: 10px;
-    top: 12px;
-    padding-top: 5px;
-    height: 12px;
+    @media screen and (min-width:768px) {
+        cursor: pointer;
+        position: absolute;
+        right: 10px;
+        top: 12px;
+        padding-top: 5px;
+        height: 12px;
+    }
 }
 
 li:hover {
@@ -62,6 +93,16 @@ li:hover {
 
 .cont {
     margin-top: 160px;
+
+    @media screen and (max-width:768px) {
+        margin-top: 0;
+    }
+}
+
+#cont-1 {
+    @media screen and (max-width:768px) {
+        margin-top: 48px;
+    }
 }
 
 h2 {
@@ -71,6 +112,12 @@ h2 {
     font-size: 42px;
     line-height: 42px;
     letter-spacing: 10%;
+
+    @media screen and (max-width: 767px) {
+        font-size: 28px;
+        line-height: 28px;
+    }
+
 }
 
 .subTitle {
@@ -83,7 +130,14 @@ h2 {
     line-height: 16px;
     font-weight: normal;
     letter-spacing: 10%;
+
     /* 文字間隔を追加 */
+    @media screen and (max-width:768px) {
+        margin-top: 8px;
+        margin-bottom: 24px;
+        font-size: 12px;
+        line-height: 12px;
+    }
 }
 
 .subTitle:before,
@@ -121,7 +175,6 @@ h2 {
     /* 88行目の色をB71B26に設定 */
 }
 
-
 .subTitle:before {
     margin-right: 8px;
 }
@@ -130,12 +183,37 @@ h2 {
     margin-left: 8px;
 }
 
+.list-1-2-3 {
+    @media screen and (min-width:768px) {
+        text-align: center;
+        display: flex;
+    }
+
+    @media screen and (max-width:768px) {
+        text-align: center;
+    }
+}
+
+.list-1-2-3 img {
+    @media screen and (max-width:768px) {
+        margin-bottom: 8px;
+    }
+}
+
 h3 {
     font-weight: bold;
     text-align: center;
     font-family: 'Noto Sans JP', sans-serif;
     font-family: 'Playfair Display', serif;
     font-size: 28px;
+
+    @media screen and (max-width: 768px) {
+        font-family: "Noto Serif JP", serif;
+        font-weight: medium;
+        font-size: 20px;
+        line-height: 20px;
+        letter-spacing: 10%;
+    }
 }
 
 p {
@@ -143,13 +221,67 @@ p {
     font-family: 'Playfair Display', serif;
 }
 
+.list-p {
+    @media screen and (min-width:768px) {
+        width: 362.5px;
+        margin: 0 40px;
+    }
+
+    @media screen and (max-width:768px) {
+        width: 362.5px;
+        margin: 24px auto;
+        font-family: "Noto Sans JP", sans-serif;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 21px;
+        letter-spacing: 10%;
+    }
+}
+
+.moreBtn {
+    @media screen and (min-width:768px) {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 20px;
+        width: 400px;
+    }
+
+    @media screen and (max-width:768px) {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 48px;
+        font-family: "Noto Sans JP", sans-serif;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 21px;
+        letter-spacing: 10%;
+    }
+}
+
 .familyText {
-    width: 1020px;
+    @media screen and (min-width:768px) {
+        width: 1020px;
+    }
+
     margin: 24px auto 0 auto;
+
+    @media screen and (max-width:768px) {
+        margin: 16px auto 0 auto;
+        width: 351px;
+        font-family: "Noto Sans JP", sans-serif;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 28px;
+        letter-spacing: 10%;
+    }
 }
 
 .SERVICE {
     margin-top: 200px;
+
+    @media screen and (max-width:768px) {
+        margin-top: 80px;
+    }
 }
 
 #cont-3 {
@@ -157,12 +289,155 @@ p {
     padding-top: 48px;
 }
 
+.list {
+    @media screen and (min-width:768px) {
+        display: flex;
+        justify-content: center;
+    }
+
+    @media screen and (max-width:768px) {
+        text-align: center;
+    }
+}
+
+.flow {
+    @media screen and (min-width:768px) {
+        background-color: #333333;
+        color: #FFFFFF;
+        font-size: 35px;
+        border-radius: 50px;
+        height: 400px;
+        width: 62.5px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+    }
+
+    @media screen and (max-width:768px) {
+        background-color: #333333;
+        color: #FFFFFF;
+        font-family: "Noto Sans JP", sans-serif;
+        font-weight: 500;
+        /* Medium */
+        font-size: 16px;
+        line-height: 16px;
+        letter-spacing: 10%;
+        border-radius: 50px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        padding: 0px;
+        margin: 0 auto;
+        width: 300px;
+        height: 32px;
+        justify-content: center;
+    }
+}
+
+.arrow {
+    @media screen and (min-width:768px) {
+        transform: scale(0.5, 1);
+        margin: 0 auto;
+        width: 30px;
+        height: 60px;
+    }
+
+    @media screen and (max-width:768px) {
+        /* width: 16px; */
+        /* height: 32px; */
+    }
+}
+
+#arrow1 {
+    @media screen and (min-width:768px) {
+        color: rgba(183, 27, 38, 0.6);
+        font-size: 65px;
+        display: flex;
+        align-items: center;
+    }
+
+    @media screen and (max-width:768px) {
+        color: rgba(183, 27, 38, 0.6);
+        font-size: 50px;
+        text-align: center;
+        transform: rotate(90deg);
+        /* width: 16px;
+    height: 32px; */
+    }
+}
+
+#arrow2 {
+    @media screen and (min-width:768px) {
+        color: rgba(183, 27, 38, 0.7);
+        font-size: 65px;
+        display: flex;
+        align-items: center;
+    }
+
+    @media screen and (max-width:768px) {
+        color: rgba(183, 27, 38, 0.7);
+        font-size: 50px;
+        text-align: center;
+        transform: rotate(90deg);
+    }
+}
+
+#arrow3 {
+    @media screen and (min-width:768px) {
+        color: rgba(183, 27, 38, 0.8);
+        font-size: 65px;
+        display: flex;
+        align-items: center;
+    }
+
+    @media screen and (max-width:768px) {
+        color: rgba(183, 27, 38, 0.8);
+        font-size: 50px;
+        text-align: center;
+        transform: rotate(90deg);
+    }
+}
+
+#arrow4 {
+    @media screen and (min-width:768px) {
+        color: rgba(183, 27, 38, 0.9);
+        font-size: 65px;
+        display: flex;
+        align-items: center;
+    }
+
+    @media screen and (max-width:768px) {
+        color: rgba(183, 27, 38, 0.9);
+        font-size: 50px;
+        text-align: center;
+        transform: rotate(90deg);
+    }
+}
+
+#arrow5 {
+    @media screen and (min-width:768px) {
+        color: rgba(183, 27, 38, 1);
+        font-size: 65px;
+        display: flex;
+        align-items: center;
+    }
+
+    @media screen and (max-width:768px) {
+        color: rgba(183, 27, 38, 1);
+        font-size: 50px;
+        text-align: center;
+        transform: rotate(90deg);
+    }
+}
+
 .sekou {
     color: #B71B26;
 }
 
 #cont-4 {
-    /* text-align: center; */
+    @media screen and (max-width:768px) {
+        margin-top: 80px;
+    }
 }
 
 .Q-1 {
@@ -173,6 +448,19 @@ p {
     height: 40px;
     color: #FFFFFF;
     text-align: center;
+
+    @media screen and (max-width:768px) {
+        font-family: 'Noto Serif JP', serif;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 20px;
+        letter-spacing: 0%;
+        width: 36px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 .A-1 {
@@ -183,27 +471,81 @@ p {
     height: 40px;
     color: #FFFFFF;
     text-align: center;
+
+    @media screen and (max-width:768px) {
+        font-family: 'Noto Serif JP', serif;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 20px;
+        letter-spacing: 0%;
+        width: 36px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 .Q-2 {
     width: 700px;
     margin-left: 8px;
+
+    @media screen and (max-width:768px) {
+        font-family: 'Noto Sans JP', sans-serif;
+        /* フォントファミリー */
+        font-weight: normal;
+        /* フォントウェイト */
+        font-size: 16px;
+        /* フォントサイズ */
+        line-height: 24px;
+        /* 行間 */
+        letter-spacing: 10%;
+        /* 文字間隔 */
+        width: 308px;
+    }
 }
 
 .A-2 {
     width: 700px;
     margin-left: 8px;
+
+    @media screen and (max-width:768px) {
+        font-family: 'Noto Sans JP', sans-serif;
+        /* フォントファミリー */
+        font-weight: normal;
+        /* フォントウェイト */
+        font-size: 16px;
+        /* フォントサイズ */
+        line-height: 24px;
+        /* 行間 */
+        letter-spacing: 10%;
+        /* 文字間隔 */
+        width: 308px;
+    }
 }
 
 .QA {
     display: flex;
     align-items: center;
     margin: 10px auto;
-    width: 1020px;
+
+    @media screen and (min-width:768px) {
+        width: 1020px;
+    }
+
+    @media screen and (max-width:768px) {
+        margin-left: 12px;
+    }
 }
 
 .bg-2 {
     background-color: rgba(34, 62, 105, 0.15);
+    padding-bottom: 48.36px;
+    margin-bottom: 219px;
+
+    @media screen and (max-width:768px) {
+        margin-bottom: 126.02px;
+    }
 }
 
 #contact {
@@ -212,11 +554,73 @@ p {
 
 .bg-1 {
     background-color: rgba(255, 255, 255, 0.5);
-    width: 1020px;
-    margin: 0 auto;
+
+    @media screen and (min-width:768px) {
+        width: 1020px;
+    }
+
+    margin: 47.64px auto 0px;
+    padding: 24px 0 48px;
+
+    @media screen and (max-width:768px) {
+        background-color: unset;
+        width: 375px;
+    }
+}
+
+.question,
+.name,
+.spell,
+.call,
+.accessCenter,
+.email,
+.email-confirm,
+.inquiry-content {
+    @media screen and (max-width:768px) {
+        text-align: center;
+    }
+}
+
+/* リンク（a要素） */
+.contact-text a {
+    @media screen and (max-width:768px) {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 16px;
+        letter-spacing: 10%;
+        /* 文字間隔 */
+    }
+}
+
+.accessA {
+    @media screen and (max-width:768px) {
+        width: 375px;
+    }
+}
+
+.accessCenter {
+    @media screen and (max-width:768px) {
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+.email p,
+.email-confirm p {
+    @media screen and (max-width:768px) {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 16px;
+        letter-spacing: 10%;
+        /* 文字間隔 */
+    }
 }
 
 .hissu {
+    margin-left: 8px;
+    margin-right: 12px;
     background-color: #B71B26;
     border-radius: 8px;
     color: #FFFFFF;
@@ -224,9 +628,37 @@ p {
     line-height: 24px;
     width: 58px;
     letter-spacing: 0.1em;
-    /* em 単位での指定 */
     display: inline-block;
     text-align: center;
+
+    @media screen and (max-width:768px) {
+        font-size: 10px;
+        line-height: 10px;
+        width: 40px;
+        height: 18px;
+        padding: 4px 0;
+    }
+}
+
+.postBr {
+    @media screen and (min-width:768px) {
+        display: none;
+    }
+}
+
+.post {
+    @media screen and (max-width:768px) {
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        text-align: left;
+    }
+}
+
+.access .hissuBr {
+    @media screen and (max-width:768px) {
+        display: none;
+    }
 }
 
 label {
@@ -241,6 +673,11 @@ label {
 input[type="radio"] {
     width: 24px;
     height: 24px;
+
+    @media screen and (max-width:768px) {
+        width: 16px;
+        height: 16px;
+    }
 }
 
 .contact-text {
@@ -250,6 +687,27 @@ input[type="radio"] {
     line-height: 20px;
     letter-spacing: 0.1em;
     color: #333333;
+    margin-top: 24px;
+
+    @media screen and (max-width:768px) {
+        /* text-align: center; */
+    }
+}
+
+.questionLabel {
+    @media screen and (max-width:768px) {
+        display: block;
+    }
+}
+
+.questionLabel label {
+    @media screen and (max-width:768px) {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 14px;
+        letter-spacing: 10%;
+    }
 }
 
 input {
@@ -261,21 +719,42 @@ input {
 .call input {
     width: 332px;
     height: 52px;
+
+    @media screen and (max-width:768px) {
+        width: 351px;
+        height: 30px;
+    }
 }
 
 .access input:nth-of-type(1) {
     width: 222px;
     height: 52px;
+
+    @media screen and (max-width:768px) {
+        display: inline-block;
+    }
 }
 
 .access input:nth-of-type(2) {
     width: 664px;
     height: 52px;
+    margin-top: 24px;
+    margin-left: 122px;
+
+    @media screen and (max-width:768px) {
+        width: 351px;
+        height: 30px;
+    }
 }
 
 .contact-text input[type="email"] {
     width: 664px;
     height: 52px;
+
+    @media screen and (max-width:768px) {
+        width: 351px;
+        height: 30px;
+    }
 }
 
 /* お問い合わせ種別 */
@@ -283,50 +762,206 @@ input {
     margin-left: 80px;
 }
 
+.question label:nth-of-type(1) {
+    margin-right: 40px;
+}
+
 /* お名前 */
 .name {
     margin-left: 190px;
+
+    @media screen and (max-width:768px) {
+        margin-left: 12px;
+    }
 }
 
 /* フリガナ */
 .spell {
     margin-left: 168px;
+
+    @media screen and (max-width:768px) {
+        margin-left: 12px;
+    }
 }
 
 /* 電話番号 */
 .call {
     margin-left: 168px;
+
+    @media screen and (max-width:768px) {
+        margin-left: 12px;
+    }
 }
 
-/* 住所 */
 .access {
     margin-left: 212px;
+
+    @media screen and (max-width:768px) {
+        margin-left: 12px;
+    }
+}
+
+.access span {
+    margin-right: 12px;
+
+    /* 〒と「必須」の間の間隔 */
+    @media screen and (max-width:768px) {}
+}
+
+.access input[type="text"] {
+    margin-left: 4px;
+
+    /* 入力欄との間の間隔 */
+    @media screen and (max-width:768px) {}
 }
 
 /* メールアドレス */
-input[type="email"] {
+.email {
     margin-left: 102px;
+
+    @media screen and (max-width:768px) {
+        margin-left: 12px;
+    }
 }
 
 /* メールアドレス(確認用) */
-input[type="email"]:last-child {
+.email-confirm {
     margin-left: 16px;
+
+    @media screen and (max-width:768px) {
+        margin-left: 12px;
+    }
 }
 
 /* inquiry-content */
 .inquiry-content {
     margin-left: 80px;
+
+    @media screen and (max-width:768px) {
+        margin-left: 12px;
+    }
+}
+
+.inquiry-content .contact-text {
+    margin-right: 78px;
 }
 
 .inquiry-content input[type="text"] {
     width: 664px;
     height: 208px;
+
+    @media screen and (max-width:768px) {
+        width: 351px;
+        height: 120px;
+    }
 }
 
 .kakunin {
-    text-align: center;
+    margin: 48px auto 0;
+
+    @media screen and (min-width:768px) {
+        width: 300px;
+    }
+
+    /* 幅 */
+    height: 68px;
+    /* 高さ */
+    position: relative;
+
+    @media screen and (max-width:768px) {
+        margin-left: 87.5px;
+    }
+}
+
+.kakunin input[type="submit"] {
+    font-family: 'Noto Serif JP', serif;
+    /* フォントの指定 */
+    font-weight: bold;
+    /* 太字 */
+    font-size: 20px;
+    /* フォントサイズ */
+    line-height: 20px;
+    /* 行の高さ */
+    letter-spacing: 1px;
+    /* 文字間隔 */
     background-color: #333333;
+    /* 背景色 */
     color: #FFFFFF;
+    /* テキスト色 */
+    width: 300px;
+    /* 幅 */
+    height: 68px;
+    /* 高さ */
+    border: none;
+    /* ボーダーをなくす */
+    cursor: pointer;
+    /* カーソルの形状をポインターに変更 */
+    padding-left: 43px;
+
+    @media screen and (max-width:768px) {
+        font-size: 16px;
+        /* フォントサイズ */
+        line-height: 16px;
+        /* 行の高さ */
+        letter-spacing: 1px;
+        width: 200px;
+        /* 幅 */
+        height: 48px;
+        padding-left: 16.5px;
+    }
+}
+
+.submit-arrow {
+    position: absolute;
+    color: #FFFFFF;
+    width: 9.5px;
+    height: 19px;
+    right: 43.5px;
+    top: 26px;
+    transform: scale(0.5, 1);
+    font-size: 25px;
+
+    @media screen and (max-width:768px) {
+        right: 110px;
+        top: 11px;
+    }
+}
+
+.pageTop {
+    width: 60px;
+    height: 60px;
+    background-color: #333333;
+    position: fixed;
+    bottom: 61.64px;
+    right: 24px;
+
+    @media screen and (max-width:768px) {
+        width: 46px;
+        height: 46px;
+        bottom: 46.02px;
+        right: 12px;
+        text-align: center;
+        /* テキストを中央揃え */
+        line-height: 60px;
+        /* 行の高さをボタンの高さと同じに */
+    }
+}
+
+.arrow6 {
+    @media screen and (min-width:768px) {
+        color: #FFFFFF;
+        position: absolute;
+        top: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 70px;
+        /* フォントサイズを70pxに設定 */
+    }
+
+    @media screen and (max-width:768px) {
+        color: #FFFFFF;
+        font-size: 40px;
+    }
 }
 
 .arrow6:hover {
@@ -337,94 +972,39 @@ footer {
     background-color: #333333;
     text-align: center;
     color: #FFFFFF;
+    height: 62px;
+    display: flex;
+    /* Flexbox を使用して要素を配置 */
+    justify-content: center;
+    /* 水平方向に中央揃え */
+    align-items: center;
+
+    /* 垂直方向に中央揃え */
+    @media screen and (max-width:768px) {
+        height: 45px;
+    }
 }
 
-@media screen and (max-width:640px) {
-    .hero2 {
-        display: none;
-    }
+footer a {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: medium;
+    font-size: 10px;
+    line-height: 10px;
+    letter-spacing: 1px;
+    /* 文字間隔はピクセルで指定する */
+    margin-right: 4px;
+}
 
-    li {
-        background-color: #FFFFFF;
-        padding: 15px 0;
-        text-align: center;
-        font-size: 25px;
-    }
+footer p {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: medium;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 1.4px;
+    /* 文字間隔はフォントサイズに対する割合で指定する */
+}
 
-    .list-1-2-3 {
-        text-align: center;
-    }
-
-    .list-p {
-        width: 362.5px;
-        margin: 24px auto;
-    }
-
-    .moreBtn {
-        display: flex;
-        justify-content: flex-end;
-    }
-
-    .list {
-        text-align: center;
-    }
-
-    .flow {
-        background-color: #333333;
-        color: #FFFFFF;
-        font-size: 35px;
-        border-radius: 50px;
-        text-align: center;
-        display: flex;
-        align-items: center;
-        padding: 0 100px;
-        margin: 0 10px;
-    }
-
-    .arrow1 {
-        color: rgba(183, 27, 38, 0.6);
-        font-size: 50px;
-        text-align: center;
-        transform: rotate(90deg);
-    }
-
-    .arrow2 {
-        color: rgba(183, 27, 38, 0.7);
-        font-size: 50px;
-        text-align: center;
-        transform: rotate(90deg);
-    }
-
-    .arrow3 {
-        color: rgba(183, 27, 38, 0.8);
-        font-size: 50px;
-        text-align: center;
-        transform: rotate(90deg);
-    }
-
-    .arrow4 {
-        color: rgba(183, 27, 38, 0.9);
-        font-size: 50px;
-        text-align: center;
-        transform: rotate(90deg);
-    }
-
-    .arrow5 {
-        color: rgba(183, 27, 38, 1);
-        font-size: 50px;
-        text-align: center;
-        transform: rotate(90deg);
-    }
-
-    .arrow6 {
-        background-color: #333333;
-        color: #FFFFFF;
-        position: fixed;
-        bottom: 0;
-        left: 300px;
-        font-size: 40px;
-    }
-
+@media screen and (max-width:768px) {
     .gMenu {
         position: fixed;
         right: 0;
@@ -437,8 +1017,8 @@ footer {
     .gMenu .menu-icon {
         cursor: pointer;
         position: absolute;
-        right: 10px;
-        top: 12px;
+        right: 12px;
+        top: 17px;
         padding-top: 5px;
         height: 12px;
     }
@@ -537,113 +1117,19 @@ footer {
     }
 }
 
-@media screen and (min-width:640px) {
-    .hero3 {
-        display: none;
-    }
-
+@media screen and (min-width:768px) {
     ul {
         display: flex;
-    }
-
-    li {
-        width: 125px;
-        background-color: #FFFFFF;
-        padding: 15px 0;
-        text-align: center;
     }
 
     .menu-btn {
         display: none;
     }
 
-    .list-1-2-3 {
-        text-align: center;
-        display: flex;
-    }
-
-    .list-p {
-        width: 362.5px;
-        margin: 0 40px;
-    }
-
-    .moreBtn {
-        display: flex;
-        justify-content: flex-end;
-        margin-top: 20px;
-        width: 400px;
-    }
-
-    .list {
-        display: flex;
-        justify-content: center;
-    }
-
-    .flow {
-        background-color: #333333;
-        color: #FFFFFF;
-        font-size: 35px;
-        border-radius: 50px;
-        height: 400px;
-        width: 62.5px;
-        text-align: center;
-        display: flex;
-        align-items: center;
-    }
-
-    .arrow {
-        transform: scale(0.5, 1);
-        margin: 0 auto;
-    }
-
     .arrowSpan {
         display: flex;
         align-items: center;
         width: 112px;
-    }
-
-    #arrow1 {
-        color: rgba(183, 27, 38, 0.6);
-        font-size: 50px;
-        display: flex;
-        align-items: center;
-    }
-
-    #arrow2 {
-        color: rgba(183, 27, 38, 0.7);
-        font-size: 50px;
-        display: flex;
-        align-items: center;
-    }
-
-    #arrow3 {
-        color: rgba(183, 27, 38, 0.8);
-        font-size: 50px;
-        display: flex;
-        align-items: center;
-    }
-
-    #arrow4 {
-        color: rgba(183, 27, 38, 0.9);
-        font-size: 50px;
-        display: flex;
-        align-items: center;
-    }
-
-    #arrow5 {
-        color: rgba(183, 27, 38, 1);
-        font-size: 50px;
-        display: flex;
-        align-items: center;
-    }
-
-    .arrow6 {
-        background-color: #333333;
-        color: #FFFFFF;
-        position: fixed;
-        bottom: 0;
-        left: 1200px;
-        font-size: 40px;
     }
 
     .hissuBr {
